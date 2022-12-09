@@ -47,11 +47,11 @@ log.setDefaultLevel(process.env.METAMASK_DEBUG ? 'debug' : 'warn');
 if (shouldInjectProvider()) {
   // setup background connection
   const metamaskStream = new WindowPostMessageStream({
-    name: 'qnekt-inpage',
-    target: 'qnekt-contentscript',
+    name: 'altmasq-inpage',
+    target: 'altmasq-contentscript',
   });
 
-  const jsonRpcStreamName = 'qnekt-provider';
+  const jsonRpcStreamName = 'altmasq-provider';
   const inPageProvider = initializeProvider({
     connectionStream: metamaskStream,
     jsonRpcStreamName,

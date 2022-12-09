@@ -22,7 +22,7 @@ export default function createMetamaskMiddleware({
   const metamaskMiddleware = mergeMiddleware([
     createScaffoldMiddleware({
       eth_syncing: false,
-      // web3_clientVersion: `Qnekt/v${version}`,
+      // web3_clientVersion: `Altmasq/v${version}`,
     }),
     createWalletMiddleware({
       getAccounts,

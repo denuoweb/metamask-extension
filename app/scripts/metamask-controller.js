@@ -169,7 +169,7 @@ export const METAMASK_CONTROLLER_EVENTS = {
 };
 
 // stream channels
-const PHISHING_SAFELIST = 'qnekt-phishing-safelist';
+const PHISHING_SAFELIST = 'altmasq-phishing-safelist';
 
 export default class MetamaskController extends EventEmitter {
   /**
@@ -3517,7 +3517,7 @@ export default class MetamaskController extends EventEmitter {
 
     // messages between inpage and background
     this.setupProviderConnection(
-      mux.createStream('qnekt-provider'),
+      mux.createStream('altmasq-provider'),
       sender,
       _subjectType,
     );

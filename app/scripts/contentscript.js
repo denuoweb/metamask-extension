@@ -20,13 +20,13 @@ const inpageSuffix = `//# sourceURL=${browser.runtime.getURL('inpage.js')}\n`;
 const inpageBundle = inpageContent + inpageSuffix;
 
 // contexts
-const CONTENT_SCRIPT = 'qnekt-contentscript';
-const INPAGE = 'qnekt-inpage';
-const PHISHING_WARNING_PAGE = 'qnekt-phishing-warning-page';
+const CONTENT_SCRIPT = 'altmasq-contentscript';
+const INPAGE = 'altmasq-inpage';
+const PHISHING_WARNING_PAGE = 'altmasq-phishing-warning-page';
 
 // stream channels
-const PHISHING_SAFELIST = 'qnekt-phishing-safelist';
-const PROVIDER = 'qnekt-provider';
+const PHISHING_SAFELIST = 'altmasq-phishing-safelist';
+const PROVIDER = 'altmasq-provider';
 
 // For more information about these legacy streams, see here:
 // https://github.com/MetaMask/metamask-extension/issues/15491

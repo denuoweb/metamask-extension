@@ -32,11 +32,11 @@
     "description": "The name of the application"
   },
   "appNameBeta": {
-    "message": "Qnekt Beta",
+    "message": "Altmasq Beta",
     "description": "The name of the application (Beta)"
   },
   "appNameFlask": {
-    "message": "Qnekt Flask",
+    "message": "Altmasq Flask",
     "description": "The name of the application (Flask)"
   },
   "approve": {
