@@ -6,14 +6,14 @@ import {
   resetEnsResolution,
 } from '../../../../ducks/ens';
 import {
-  getQtumAddressBook,
-  isQtumAddressShow,
+  getHtmlcoinAddressBook,
+  isHtmlcoinAddressShow,
 } from '../../../../ducks/metamask/metamask';
 import EnsInput from './ens-input.component';
 
 function mapStateToProps(state) {
-  const qtumAddressBook = getQtumAddressBook(state);
-  const isQtumAddressShowCheck = isQtumAddressShow(state);
+  const htmlcoinAddressBook = getHtmlcoinAddressBook(state);
+  const isHtmlcoinAddressShowCheck = isHtmlcoinAddressShow(state);
   const {
     metamask: {
       provider: { chainId },
@@ -22,8 +22,8 @@ function mapStateToProps(state) {
 
   return {
     chainId,
-    qtumAddressBook,
-    isQtumAddressShowCheck,
+    htmlcoinAddressBook,
+    isHtmlcoinAddressShowCheck,
   };
 }
 

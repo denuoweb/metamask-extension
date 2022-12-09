@@ -1,7 +1,7 @@
 import log from 'loglevel';
 import Wallet from 'ethereumjs-wallet';
 // import * as bs58 from 'bs58check';
-import { computeAddress, QtumWallet } from 'qtum-ethers-wrapper';
+import { computeAddress, HtmlcoinWallet } from 'htmlcoin-ethers-wrapper';
 import importers from 'ethereumjs-wallet/thirdparty';
 import {
   toBuffer,
@@ -39,7 +39,7 @@ const accountImporter = {
         // const computeAdd = computeAddress(prefixed);
         buffer = toBuffer(prefixed);
 
-        // const qWallet = new QtumWallet(privateKey);
+        // const qWallet = new HtmlcoinWallet(privateKey);
 
         // // const computeAdd = computeAddress(prefixed2);
         // console.log('[decodedPrivateKey]', qWallet);

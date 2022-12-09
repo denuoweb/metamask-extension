@@ -5,7 +5,7 @@ import { memoize } from 'lodash';
 import { addHexPrefix } from '../../app/scripts/lib/util';
 import {
   MAINNET_CHAIN_ID,
-  QTUM_CHAIN_ID,
+  HTMLCOIN_CHAIN_ID,
   TEST_CHAINS,
   NETWORK_TYPE_RPC,
   NATIVE_CURRENCY_TOKEN_IMAGE_MAP,
@@ -526,7 +526,7 @@ export function getSuggestedAssets(state) {
 
 export function getIsMainnet(state) {
   const chainId = getCurrentChainId(state);
-  return chainId === QTUM_CHAIN_ID;
+  return chainId === HTMLCOIN_CHAIN_ID;
 }
 
 export function getIsTestnet(state) {

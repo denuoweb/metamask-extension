@@ -26,7 +26,7 @@ const mapStateToProps = (state, ownProps) => {
   const {
     useNativeCurrencyAsPrimaryCurrency,
     hideZeroBalanceTokens,
-    isQtumAddressShow,
+    isHtmlcoinAddressShow,
   } = getPreferences(state);
 
   const { lastFetchedConversionDate } = ownProps;
@@ -40,7 +40,7 @@ const mapStateToProps = (state, ownProps) => {
     useBlockie,
     useNativeCurrencyAsPrimaryCurrency,
     hideZeroBalanceTokens,
-    isQtumAddressShow,
+    isHtmlcoinAddressShow,
     lastFetchedConversionDate,
     selectedAddress,
     tokenList,

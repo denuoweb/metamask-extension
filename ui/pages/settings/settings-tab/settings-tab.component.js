@@ -322,7 +322,7 @@ export default class SettingsTab extends PureComponent {
 
   renderUsePrimaryAddressOptions() {
     const { t } = this.context;
-    const { setPrimaryAddressPreference, isQtumAddressShow } = this.props;
+    const { setPrimaryAddressPreference, isHtmlcoinAddressShow } = this.props;
 
     return (
       <div className="settings-page__content-row">
@@ -340,7 +340,7 @@ export default class SettingsTab extends PureComponent {
                   type="radio"
                   id="hex-primary-address"
                   onChange={() => setPrimaryAddressPreference(false)}
-                  checked={!isQtumAddressShow}
+                  checked={!isHtmlcoinAddressShow}
                 />
                 <label
                   htmlFor="hex-primary-address"
@@ -352,15 +352,15 @@ export default class SettingsTab extends PureComponent {
               <div className="settings-tab__radio-button">
                 <input
                   type="radio"
-                  id="qtum-primary-address"
+                  id="htmlcoin-primary-address"
                   onChange={() => setPrimaryAddressPreference(true)}
-                  checked={isQtumAddressShow}
+                  checked={isHtmlcoinAddressShow}
                 />
                 <label
-                  htmlFor="qtum-primary-address"
+                  htmlFor="htmlcoin-primary-address"
                   className="settings-tab__radio-label"
                 >
-                  Qtum Address
+                  Htmlcoin Address
                 </label>
               </div>
             </div>

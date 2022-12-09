@@ -547,29 +547,29 @@ export function setNativeCurrency() {
   };
 }
 
-export function getHexAddressFromQtumAddress(_address) {
+export function getHexAddressFromHtmlcoinAddress(_address) {
   return async () => {
     try {
-      const qtumAddress = await promisifiedBackground.getHexAddressFromQtum(
+      const htmlcoinAddress = await promisifiedBackground.getHexAddressFromHtmlcoin(
         _address,
       );
-      return qtumAddress;
+      return htmlcoinAddress;
     } catch (error) {
-      console.log('[getHexAddressFromQtum error]', error);
+      console.log('[getHexAddressFromHtmlcoin error]', error);
       return undefined;
     }
   };
 }
 
-export function getQtumAddressFromHexAddress(_address) {
+export function getHtmlcoinAddressFromHexAddress(_address) {
   return async () => {
     try {
-      const qtumAddress = await promisifiedBackground.getQtumAddressFromHex(
+      const htmlcoinAddress = await promisifiedBackground.getHtmlcoinAddressFromHex(
         _address,
       );
-      return qtumAddress;
+      return htmlcoinAddress;
     } catch (error) {
-      console.log('[getQtumAddressFromHexAddress error]', error);
+      console.log('[getHtmlcoinAddressFromHexAddress error]', error);
       return undefined;
     }
   };
@@ -1457,12 +1457,12 @@ export function updateMetamaskState(newState) {
       selectedAddress: newSelectedAddress,
       provider: newProvider,
       nativeCurrency,
-      qtumAddresses,
+      htmlcoinAddresses,
     } = newState;
     console.log(
       '[update metamask nativeCurrency]',
       nativeCurrency,
-      qtumAddresses,
+      htmlcoinAddresses,
       newSelectedAddress,
     );
 
@@ -1539,21 +1539,21 @@ export function updateMetamaskState(newState) {
     });
 
     if (
-      nativeCurrency === 'QTUM' &&
-      newState.qtumBalances[newSelectedAddress] !== undefined
+      nativeCurrency === 'HTMLCOIN' &&
+      newState.htmlcoinBalances[newSelectedAddress] !== undefined
     ) {
       console.log(
-        '[account qtum balance action check]',
-        newState.qtumBalances[newSelectedAddress].spendableBalance,
+        '[account htmlcoin balance action check]',
+        newState.htmlcoinBalances[newSelectedAddress].spendableBalance,
       );
       dispatch({
-        type: actionConstants.UPDATE_QTUM_BALANCE,
+        type: actionConstants.UPDATE_HTMLCOIN_BALANCE,
         payload: {
-          qtumBalances: {
+          htmlcoinBalances: {
             spendableBalance:
-              newState.qtumBalances[newSelectedAddress].spendableBalance,
+              newState.htmlcoinBalances[newSelectedAddress].spendableBalance,
             pendingBalance:
-              newState.qtumBalances[newSelectedAddress].pendingBalance,
+              newState.htmlcoinBalances[newSelectedAddress].pendingBalance,
           },
         },
       });
@@ -2594,7 +2594,7 @@ export function setUseNativeCurrencyAsPrimaryCurrencyPreference(value) {
 }
 
 export function setPrimaryAddressPreference(value) {
-  return setPreference('isQtumAddressShow', value);
+  return setPreference('isHtmlcoinAddressShow', value);
 }
 
 export function setHideZeroBalanceTokens(value) {

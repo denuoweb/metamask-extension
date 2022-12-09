@@ -2,8 +2,8 @@ import { connect } from 'react-redux';
 import {
   getSendErrors,
   getSendAsset,
-  getQtumSpendableBalanceInString,
-  sendQtumAmountIsInError,
+  getHtmlcoinSpendableBalanceInString,
+  sendHtmlcoinAmountIsInError,
 } from '../../../../../ducks/send';
 import { ASSET_TYPES } from '../../../../../../shared/constants/transaction';
 import SendRowErrorMessage from './send-row-error-message.component';
@@ -13,11 +13,11 @@ export default connect(mapStateToProps)(SendRowErrorMessage);
 function mapStateToProps(state, ownProps) {
   return {
     errors: getSendErrors(state),
-    inErrorQtum: sendQtumAmountIsInError(state),
+    inErrorHtmlcoin: sendHtmlcoinAmountIsInError(state),
     errorType: ownProps.errorType,
-    qtumBalance:
+    htmlcoinBalance:
       getSendAsset(state).type === ASSET_TYPES.NATIVE
-        ? getQtumSpendableBalanceInString(state)
+        ? getHtmlcoinSpendableBalanceInString(state)
         : null,
   };
 }

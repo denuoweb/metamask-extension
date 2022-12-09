@@ -5,8 +5,8 @@ import { isHexString } from 'ethereumjs-util';
 
 import {
   isValidDomainName,
-  getHexAddressFromQtum,
-  getQtumAddressFromHex,
+  getHexAddressFromHtmlcoin,
+  getHtmlcoinAddressFromHex,
 } from '../../../../helpers/utils/util';
 import { addHexPrefix } from '../../../../../app/scripts/lib/util';
 import {
@@ -24,8 +24,8 @@ export default class EnsInput extends Component {
     className: PropTypes.string,
     chainId: PropTypes.string,
     selectedAddress: PropTypes.string,
-    qtumAddressBook: PropTypes.object,
-    isQtumAddressShowCheck: PropTypes.bool,
+    htmlcoinAddressBook: PropTypes.object,
+    isHtmlcoinAddressShowCheck: PropTypes.bool,
     selectedName: PropTypes.string,
     scanQrCode: PropTypes.func,
     onPaste: PropTypes.func,
@@ -52,7 +52,7 @@ export default class EnsInput extends Component {
         const input = text.trim();
         let hexAddress = input;
         if (this.isBase58(input) || !isHexString(input)) {
-          hexAddress = getHexAddressFromQtum(input);
+          hexAddress = getHexAddressFromHtmlcoin(input);
         }
         if (
           !isBurnAddress(hexAddress) &&
@@ -75,7 +75,7 @@ export default class EnsInput extends Component {
     const input = value.trim();
     let hexAddress = input;
     if (this.isBase58(input) || !isHexString(input)) {
-      hexAddress = getHexAddressFromQtum(input);
+      hexAddress = getHexAddressFromHtmlcoin(input);
     }
     onChange(hexAddress);
 
@@ -102,16 +102,16 @@ export default class EnsInput extends Component {
   };
 
   convertAddress = (input) => {
-    const { chainId, isQtumAddressShowCheck } = this.props;
-    if (isQtumAddressShowCheck && isHexString(input) && input !== '') {
-      const newAddress = getQtumAddressFromHex(input, chainId);
+    const { chainId, isHtmlcoinAddressShowCheck } = this.props;
+    if (isHtmlcoinAddressShowCheck && isHexString(input) && input !== '') {
+      const newAddress = getHtmlcoinAddressFromHex(input, chainId);
       return newAddress;
     } else if (
-      !isQtumAddressShowCheck &&
+      !isHtmlcoinAddressShowCheck &&
       this.isBase58(input) &&
       input !== ''
     ) {
-      const newAddress = getHexAddressFromQtum(input);
+      const newAddress = getHexAddressFromHtmlcoin(input);
       return newAddress;
     }
     return input;
@@ -124,8 +124,8 @@ export default class EnsInput extends Component {
       selectedAddress,
       selectedName,
       userInput,
-      qtumAddressBook,
-      isQtumAddressShowCheck,
+      htmlcoinAddressBook,
+      isHtmlcoinAddressShowCheck,
     } = this.props;
 
     const hasSelectedAddress = Boolean(selectedAddress);
@@ -155,14 +155,14 @@ export default class EnsInput extends Component {
               <div className="ens-input__wrapper__input ens-input__wrapper__input--selected">
                 <div className="ens-input__selected-input__title">
                   {this.convertAddress(selectedName) ||
-                    (isQtumAddressShowCheck
-                      ? qtumAddressBook[selectedAddress]
+                    (isHtmlcoinAddressShowCheck
+                      ? htmlcoinAddressBook[selectedAddress]
                       : this.convertAddress(selectedAddress))}
                 </div>
                 {selectedName !== selectedAddress && (
                   <div className="ens-input__selected-input__subtitle">
-                    {isQtumAddressShowCheck
-                      ? qtumAddressBook[selectedAddress]
+                    {isHtmlcoinAddressShowCheck
+                      ? htmlcoinAddressBook[selectedAddress]
                       : selectedAddress}
                   </div>
                 )}

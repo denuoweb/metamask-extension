@@ -11,8 +11,8 @@ function addressesEqual(address1, address2) {
 export default function RecipientGroup({
   label,
   items,
-  qtumAddressBook,
-  isQtumAddressShowCheck,
+  htmlcoinAddressBook,
+  isHtmlcoinAddressShowCheck,
   onSelect,
   selectedAddress,
 }) {
@@ -50,14 +50,14 @@ export default function RecipientGroup({
           >
             <div className="send__select-recipient-wrapper__group-item__title">
               {name ||
-                (isQtumAddressShowCheck
-                  ? qtumAddressBook[address]
+                (isHtmlcoinAddressShowCheck
+                  ? htmlcoinAddressBook[address]
                   : ellipsify(address))}
             </div>
             {name && (
               <div className="send__select-recipient-wrapper__group-item__subtitle">
-                {isQtumAddressShowCheck
-                  ? qtumAddressBook[address]
+                {isHtmlcoinAddressShowCheck
+                  ? htmlcoinAddressBook[address]
                   : ellipsify(address)}
               </div>
             )}
@@ -76,8 +76,8 @@ RecipientGroup.propTypes = {
       name: PropTypes.string,
     }),
   ),
-  qtumAddressBook: PropTypes.object,
-  isQtumAddressShowCheck: PropTypes.bool,
+  htmlcoinAddressBook: PropTypes.object,
+  isHtmlcoinAddressShowCheck: PropTypes.bool,
   onSelect: PropTypes.func.isRequired,
   selectedAddress: PropTypes.string,
 };

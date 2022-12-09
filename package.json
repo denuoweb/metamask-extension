@@ -208,7 +208,7 @@
     "punycode": "^2.1.1",
     "qrcode-generator": "1.4.1",
     "qrcode.react": "^1.0.1",
-    "qtum-ethers-wrapper": "^1.2.0",
+    "htmlcoin-ethers-wrapper": "^1.2.0",
     "qtumjs-lib": "^0.0.8",
     "react": "^16.12.0",
     "react-dnd": "^3.0.2",
@@ -496,7 +496,7 @@
       "@metamask/rpc-methods>@metamask/key-tree>secp256k1": false,
       "eth-lattice-keyring>gridplus-sdk>secp256k1": false,
       "eth-lattice-keyring>secp256k1": false,
-      "qtum-ethers-wrapper>secp256k1": false
+      "htmlcoin-ethers-wrapper>secp256k1": false
     }
   }
 }

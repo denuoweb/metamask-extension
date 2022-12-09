@@ -11,8 +11,8 @@ import {
   CONTACT_VIEW_ROUTE,
 } from '../../../helpers/constants/routes';
 import {
-  getQtumAddressBook,
-  isQtumAddressShow,
+  getHtmlcoinAddressBook,
+  isHtmlcoinAddressShow,
 } from '../../../ducks/metamask/metamask';
 import ContactListTab from './contact-list-tab.component';
 
@@ -28,8 +28,8 @@ const mapStateToProps = (state, ownProps) => {
   const addingContact = Boolean(pathname.match(CONTACT_ADD_ROUTE));
   const envIsPopup = getEnvironmentType() === ENVIRONMENT_TYPE_POPUP;
 
-  const qtumAddressBook = getQtumAddressBook(state);
-  const isQtumAddressShowCheck = isQtumAddressShow(state);
+  const htmlcoinAddressBook = getHtmlcoinAddressBook(state);
+  const isHtmlcoinAddressShowCheck = isHtmlcoinAddressShow(state);
 
   const hideAddressBook =
     envIsPopup && (viewingContact || editingContact || addingContact);
@@ -39,8 +39,8 @@ const mapStateToProps = (state, ownProps) => {
     editingContact,
     addingContact,
     addressBook: getAddressBook(state),
-    qtumAddressBook,
-    isQtumAddressShowCheck,
+    htmlcoinAddressBook,
+    isHtmlcoinAddressShowCheck,
     selectedAddress: pathNameTailIsAddress ? pathNameTail : '',
     hideAddressBook,
     envIsPopup,

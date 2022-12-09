@@ -1,4 +1,4 @@
-import { QtumFunctionProvider, QtumWallet } from 'qtum-ethers-wrapper';
+import { HtmlcoinFunctionProvider, HtmlcoinWallet } from 'htmlcoin-ethers-wrapper';
 import EventEmitter from 'safe-event-emitter';
 import { ObservableStore } from '@metamask/obs-store';
 import { bufferToHex, keccak, toBuffer, isHexString } from 'ethereumjs-util';
@@ -2494,7 +2494,7 @@ TransactionController.prototype.signTransaction = async function (txId) {
     networkType,
     nickname,
   );
-  const qtumProvider = new QtumFunctionProvider(async (method, params) => {
+  const htmlcoinProvider = new HtmlcoinFunctionProvider(async (method, params) => {
     const result = await new Promise((resolve, reject) => {
       this.provider.sendAsync({
         method,
@@ -2506,13 +2506,13 @@ TransactionController.prototype.signTransaction = async function (txId) {
         resolve(response);
       });
     });
-    console.log('[qtum provider]', method, params, " => ", result);
+    console.log('[htmlcoin provider]', method, params, " => ", result);
     if (result && result.error) {
       throw new Error(result.error.message);
     }
     return (result || {}).result;
   });
-  console.log('[sign transaction overload 2nd]', qtumProvider);
+  console.log('[sign transaction overload 2nd]', htmlcoinProvider);
 
   const txMeta = this.txStateManager.getTransaction(txId);
   const chainId = this.getChainId();
@@ -2562,8 +2562,8 @@ TransactionController.prototype.signTransaction = async function (txId) {
   );
   console.log('[sign transaction overload 5th]', key, ethTx);
 
-  const qtumWallet = new QtumWallet(key, qtumProvider, {filterDust: false});
-  const signedEthTx = await qtumWallet.signTransaction(ethTx)
+  const htmlcoinWallet = new HtmlcoinWallet(key, htmlcoinProvider, {filterDust: false});
+  const signedEthTx = await htmlcoinWallet.signTransaction(ethTx)
 
   // add r,s,v values for provider request purposes see createMetamaskMiddleware
   // and JSON rpc standard for further explanation

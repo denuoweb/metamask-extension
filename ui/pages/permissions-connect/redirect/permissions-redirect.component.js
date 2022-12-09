@@ -41,7 +41,7 @@ export default function PermissionsRedirect({ subjectMetadata }) {
             }
           </Box>
           <SiteIcon
-            icon="/images/logo/qtum-logo.svg"
+            icon="/images/logo/htmlcoin-logo.svg"
             size={64}
             className="permissions-redirect__site-icon"
           />

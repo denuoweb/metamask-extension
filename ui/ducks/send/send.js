@@ -66,7 +66,7 @@ import {
   ACCOUNT_CHANGED,
   ADDRESS_BOOK_UPDATED,
   GAS_FEE_ESTIMATES_UPDATED,
-  UPDATE_QTUM_BALANCE,
+  UPDATE_HTMLCOIN_BALANCE,
 } from '../../store/actionConstants';
 import {
   calcTokenAmount,
@@ -85,7 +85,7 @@ import {
   getGasEstimateType,
   getTokens,
   getUnapprovedTxs,
-  getQtumBalances,
+  getHtmlcoinBalances,
 } from '../metamask/metamask';
 
 import { resetEnsResolution } from '../ens';
@@ -314,10 +314,10 @@ export const RECIPIENT_SEARCH_MODES = {
  */
 
 /**
- * @typedef {Object} QtumBalances
- * @property {string} spendableBalance - spendable P2PK qtum balance
- * @property {string} pendingBalance - pending qtum balance
- * @property {string} [error] - error to display for qtum spendable balance fields.
+ * @typedef {Object} HtmlcoinBalances
+ * @property {string} spendableBalance - spendable P2PK htmlcoin balance
+ * @property {string} pendingBalance - pending htmlcoin balance
+ * @property {string} [error] - error to display for htmlcoin spendable balance fields.
  */
 
 /**
@@ -453,7 +453,7 @@ export const draftTransactionInitialState = {
  * @property {MapValuesToUnion<SendStateStages>} stage - The stage of the
  *  send flow that the user has progressed to. Defaults to 'INACTIVE' which
  *  results in the send screen not being shown.
- * @property {QtumBalances} qtumBalances - The spendable qtum balance to use for max send amount.
+ * @property {HtmlcoinBalances} htmlcoinBalances - The spendable htmlcoin balance to use for max send amount.
  */
 
 /**
@@ -477,7 +477,7 @@ export const initialState = {
     balance: '0x0',
   },
   stage: SEND_STAGES.INACTIVE,
-  qtumBalances: {
+  htmlcoinBalances: {
     spendableBalance: '0x0',
     pendingBalane: '0x0',
     error: null,
@@ -716,15 +716,15 @@ export const initializeSendState = createAsyncThunk(
       );
     }
 
-    let qtumBalances;
+    let htmlcoinBalances;
     console.log(
       '[check send native currency]',
       draftTransaction.asset,
       ASSET_TYPES.NATIVE,
     );
     if (draftTransaction.asset.type === ASSET_TYPES.NATIVE) {
-      qtumBalances = getQtumBalances(state);
-      console.log('[check qtum balance from metamask duck]', qtumBalances);
+      htmlcoinBalances = getHtmlcoinBalances(state);
+      console.log('[check htmlcoin balance from metamask duck]', htmlcoinBalances);
     }
 
     // There may be a case where the send has been canceled by the user while
@@ -753,7 +753,7 @@ export const initializeSendState = createAsyncThunk(
       eip1559support,
       useTokenDetection: getUseTokenDetection(state),
       tokenAddressList: Object.keys(getTokenList(state)),
-      qtumBalances,
+      htmlcoinBalances,
     };
   },
 );
@@ -971,7 +971,7 @@ const slice = createSlice({
           state.gasTotalForLayer1 || '0x0',
         );
         amount = subtractCurrencies(
-          addHexPrefix(state.qtumBalances.spendableBalance),
+          addHexPrefix(state.htmlcoinBalances.spendableBalance),
           addHexPrefix(_gasTotal),
           {
             toNumericBase: 'hex',
@@ -984,7 +984,7 @@ const slice = createSlice({
           draftTransaction.asset.balance,
           _gasTotal,
           amount,
-          state.qtumBalances.spendableBalance,
+          state.htmlcoinBalances.spendableBalance,
         );
       }
       slice.caseReducers.updateSendAmount(state, {
@@ -1325,7 +1325,7 @@ const slice = createSlice({
      * @returns {void}
      */
     validateAmountField: (state) => {
-      const { qtumBalances } = state;
+      const { htmlcoinBalances } = state;
       const draftTransaction =
         state.draftTransactions[state.currentTransactionUUID];
       switch (true) {
@@ -1334,7 +1334,7 @@ const slice = createSlice({
         case draftTransaction.asset.type === ASSET_TYPES.NATIVE &&
           !isBalanceSufficient({
             amount: draftTransaction.amount.value,
-            balance: qtumBalances.spendableBalance,
+            balance: htmlcoinBalances.spendableBalance,
             gasTotal: draftTransaction.gas.gasTotal ?? '0x0',
           }):
           draftTransaction.amount.error = INSUFFICIENT_FUNDS_ERROR;
@@ -1373,7 +1373,7 @@ const slice = createSlice({
      * @returns {void}
      */
     validateGasField: (state) => {
-      const { qtumBalances } = state;
+      const { htmlcoinBalances } = state;
       const draftTransaction =
         state.draftTransactions[state.currentTransactionUUID];
       const insufficientFunds = !isBalanceSufficient({
@@ -1383,7 +1383,7 @@ const slice = createSlice({
             : '0x0',
         balance:
           draftTransaction.asset.type === ASSET_TYPES.NATIVE
-            ? qtumBalances.spendableBalance
+            ? htmlcoinBalances.spendableBalance
             : draftTransaction.fromAccount?.balance ??
               state.selectedAccount.balance,
         gasTotal: draftTransaction.gas.gasTotal ?? '0x0',
@@ -1578,9 +1578,9 @@ const slice = createSlice({
           payload: action.payload,
         });
       })
-      .addCase(UPDATE_QTUM_BALANCE, (state, action) => {
-        console.log('[update qtum balance]', action.payload);
-        state.qtumBalances = { ...action.payload.qtumBalances };
+      .addCase(UPDATE_HTMLCOIN_BALANCE, (state, action) => {
+        console.log('[update htmlcoin balance]', action.payload);
+        state.htmlcoinBalances = { ...action.payload.htmlcoinBalances };
       })
       .addCase(initializeSendState.pending, (state) => {
         // when we begin initializing state, which can happen when switching
@@ -1588,7 +1588,7 @@ const slice = createSlice({
         // as initialization will trigger a fetch for gasPrice estimates.
         console.log(
           '[send action check state]',
-          state.qtumBalances,
+          state.htmlcoinBalances,
           state.currentTransactionUUID,
         );
         state.gasEstimateIsLoading = true;
@@ -1600,7 +1600,7 @@ const slice = createSlice({
         state.eip1559support = action.payload.eip1559support;
         state.selectedAccount.address = action.payload.account.address;
         state.selectedAccount.balance = action.payload.account.balance;
-        // state.qtumBalances = { ...action.payload.qtumBalances };
+        // state.htmlcoinBalances = { ...action.payload.htmlcoinBalances };
         const draftTransaction =
           state.draftTransactions[state.currentTransactionUUID];
         if (draftTransaction) {
@@ -1648,7 +1648,7 @@ const slice = createSlice({
       .addCase(initializeSendState.rejected, (state) => {
         console.log(
           '[initialize send state rejected]',
-          state.qtumBalances,
+          state.htmlcoinBalances,
           state.currentTransactionUUID,
         );
       })
@@ -2663,8 +2663,8 @@ export function sendAmountIsInError(state) {
   return Boolean(getCurrentDraftTransaction(state).amount?.error);
 }
 
-export function sendQtumAmountIsInError(state) {
-  return Boolean(state[name].qtumBalances.error);
+export function sendHtmlcoinAmountIsInError(state) {
+  return Boolean(state[name].htmlcoinBalances.error);
 }
 
 // Recipient Selectors
@@ -2742,7 +2742,7 @@ export function getSendErrors(state) {
   return {
     gasFee: getCurrentDraftTransaction(state).gas?.error,
     amount: getCurrentDraftTransaction(state).amount?.error,
-    qtumBalances: state.send.qtumBalances.error,
+    htmlcoinBalances: state.send.htmlcoinBalances.error,
   };
 }
 
@@ -2778,17 +2778,17 @@ export function getSendStage(state) {
   return state[name].stage;
 }
 
-export function getQtumSpendableBalanceInString(state) {
+export function getHtmlcoinSpendableBalanceInString(state) {
   let balance = '0x0';
   const draftTransaction = getCurrentDraftTransaction(state);
   console.log(
-    '[get qtum spendable balance]',
+    '[get htmlcoin spendable balance]',
     draftTransaction,
-    state.send.qtumBalances,
+    state.send.htmlcoinBalances,
   );
-  if (state.send.qtumBalances.spendableBalance) {
+  if (state.send.htmlcoinBalances.spendableBalance) {
     const amount = subtractCurrencies(
-      addHexPrefix(state.send.qtumBalances.spendableBalance),
+      addHexPrefix(state.send.htmlcoinBalances.spendableBalance),
       addHexPrefix(draftTransaction.gas.gasTotal),
       {
         toNumericBase: 'hex',

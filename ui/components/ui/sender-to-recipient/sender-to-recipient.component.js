@@ -6,12 +6,12 @@ import copyToClipboard from 'copy-to-clipboard';
 import Tooltip from '../tooltip';
 import IconCaretRight from '../icon/icon-caret-right';
 import Identicon from '../identicon';
-import { shortenAddress, getQtumAddressFromHex } from '../../../helpers/utils/util';
+import { shortenAddress, getHtmlcoinAddressFromHex } from '../../../helpers/utils/util';
 import AccountMismatchWarning from '../account-mismatch-warning/account-mismatch-warning.component';
 import { useI18nContext } from '../../../hooks/useI18nContext';
 import { toChecksumHexAddress } from '../../../../shared/modules/hexstring-utils';
 import NicknamePopovers from '../../app/modals/nickname-popovers';
-import { isQtumAddressShow, getCurrentProvider } from '../../../ducks/metamask/metamask';
+import { isHtmlcoinAddressShow, getCurrentProvider } from '../../../ducks/metamask/metamask';
 import {
   DEFAULT_VARIANT,
   CARDS_VARIANT,
@@ -31,7 +31,7 @@ function SenderAddress({
   onSenderClick,
   senderAddress,
   warnUserOnAccountMismatch,
-  isQtumAddressShowCheck,
+  isHtmlcoinAddressShowCheck,
   chainId,
 }) {
   const t = useI18nContext();
@@ -42,7 +42,7 @@ function SenderAddress({
       <p>{t('copyAddress')}</p>
     ) : (
       <p>
-        {shortenAddress(isQtumAddressShowCheck ? getQtumAddressFromHex(checksummedSenderAddress, chainId) : checksummedSenderAddress)}
+        {shortenAddress(isHtmlcoinAddressShowCheck ? getHtmlcoinAddressFromHex(checksummedSenderAddress, chainId) : checksummedSenderAddress)}
         <br />
         {t('copyAddress')}
       </p>
@@ -55,7 +55,7 @@ function SenderAddress({
       )}
       onClick={() => {
         setAddressCopied(true);
-        copyToClipboard(isQtumAddressShowCheck ? getQtumAddressFromHex(checksummedSenderAddress, chainId) : checksummedSenderAddress);
+        copyToClipboard(isHtmlcoinAddressShowCheck ? getHtmlcoinAddressFromHex(checksummedSenderAddress, chainId) : checksummedSenderAddress);
         if (onSenderClick) {
           onSenderClick();
         }
@@ -77,7 +77,7 @@ function SenderAddress({
         <div className="sender-to-recipient__name">
           {addressOnly ? (
             <span>
-              {`${senderName || shortenAddress(isQtumAddressShowCheck ? getQtumAddressFromHex(checksummedSenderAddress, chainId) : checksummedSenderAddress)}`}
+              {`${senderName || shortenAddress(isHtmlcoinAddressShowCheck ? getHtmlcoinAddressFromHex(checksummedSenderAddress, chainId) : checksummedSenderAddress)}`}
             </span>
           ) : (
             senderName
@@ -98,7 +98,7 @@ SenderAddress.propTypes = {
   senderAddress: PropTypes.string,
   onSenderClick: PropTypes.func,
   warnUserOnAccountMismatch: PropTypes.bool,
-  isQtumAddressShowCheck: PropTypes.bool,
+  isHtmlcoinAddressShowCheck: PropTypes.bool,
   chainId: PropTypes.string,
 };
 
@@ -109,7 +109,7 @@ export function RecipientWithAddress({
   recipientNickname,
   recipientEns,
   recipientName,
-  isQtumAddressShowCheck,
+  isHtmlcoinAddressShowCheck,
   chainId,
 }) {
   const t = useI18nContext();
@@ -133,7 +133,7 @@ export function RecipientWithAddress({
           {addressOnly
             ? recipientNickname ||
               recipientEns ||
-              shortenAddress(isQtumAddressShowCheck ? getQtumAddressFromHex(checksummedRecipientAddress, chainId) : checksummedRecipientAddress)
+              shortenAddress(isHtmlcoinAddressShowCheck ? getHtmlcoinAddressFromHex(checksummedRecipientAddress, chainId) : checksummedRecipientAddress)
             : recipientNickname ||
               recipientEns ||
               recipientName ||
@@ -157,7 +157,7 @@ RecipientWithAddress.propTypes = {
   recipientNickname: PropTypes.string,
   addressOnly: PropTypes.bool,
   onRecipientClick: PropTypes.func,
-  isQtumAddressShowCheck: PropTypes.bool,
+  isHtmlcoinAddressShowCheck: PropTypes.bool,
   chainId: PropTypes.string,
 };
 
@@ -196,7 +196,7 @@ function SenderToRecipient({
   const t = useI18nContext();
   const checksummedSenderAddress = toChecksumHexAddress(senderAddress);
   const checksummedRecipientAddress = toChecksumHexAddress(recipientAddress);
-  const { isQtumAddressShowCheck, chainId } = props;
+  const { isHtmlcoinAddressShowCheck, chainId } = props;
   return (
     <div className={classnames('sender-to-recipient', variantHash[variant])}>
       <SenderAddress
@@ -206,7 +206,7 @@ function SenderToRecipient({
         onSenderClick={onSenderClick}
         senderAddress={senderAddress}
         warnUserOnAccountMismatch={warnUserOnAccountMismatch}
-        isQtumAddressShowCheck={isQtumAddressShowCheck}
+        isHtmlcoinAddressShowCheck={isHtmlcoinAddressShowCheck}
       />
       <Arrow />
       {recipientAddress ? (
@@ -217,7 +217,7 @@ function SenderToRecipient({
           recipientNickname={recipientNickname}
           recipientEns={recipientEns}
           recipientName={recipientName}
-          isQtumAddressShowCheck={isQtumAddressShowCheck}
+          isHtmlcoinAddressShowCheck={isHtmlcoinAddressShowCheck}
         />
       ) : (
         <div className="sender-to-recipient__party sender-to-recipient__party--recipient">
@@ -230,7 +230,7 @@ function SenderToRecipient({
 }
 
 function mapStateToProps(state) {
-  const isQtumAddressShowCheck = isQtumAddressShow(state);
+  const isHtmlcoinAddressShowCheck = isHtmlcoinAddressShow(state);
   const {
     metamask: {
       provider: { chainId },
@@ -239,7 +239,7 @@ function mapStateToProps(state) {
 
   return {
     chainId,
-    isQtumAddressShowCheck,
+    isHtmlcoinAddressShowCheck,
   };
 }
 
@@ -263,6 +263,6 @@ SenderToRecipient.propTypes = {
   onRecipientClick: PropTypes.func,
   onSenderClick: PropTypes.func,
   warnUserOnAccountMismatch: PropTypes.bool,
-  isQtumAddressShowCheck: PropTypes.bool,
+  isHtmlcoinAddressShowCheck: PropTypes.bool,
   chainId: PropTypes.string,
 };

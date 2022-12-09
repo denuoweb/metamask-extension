@@ -2,7 +2,7 @@ import punycode from 'punycode/punycode';
 import abi from 'human-standard-token-abi';
 import BigNumber from 'bignumber.js';
 import * as ethUtil from 'ethereumjs-util';
-import qtum from 'qtumjs-lib';
+import htmlcoin from 'htmlcoinjs-lib';
 import { DateTime } from 'luxon';
 import { getFormattedIpfsUrl } from '@metamask/controllers/dist/util';
 import slip44 from '@metamask/slip44';
@@ -431,7 +431,7 @@ export function clearClipboard() {
   window.navigator.clipboard.writeText('');
 }
 
-export function getQtumAddressFromHex(_address, _chainId) {
+export function getHtmlcoinAddressFromHex(_address, _chainId) {
   let version;
   switch (_chainId) {
     case '0x22B8':
@@ -445,11 +445,11 @@ export function getQtumAddressFromHex(_address, _chainId) {
       break;
   }
   const hash = Buffer.from(_address.slice(2), 'hex');
-  return qtum.address.toBase58Check(hash, version);
+  return htmlcoin.address.toBase58Check(hash, version);
 }
 
-export function getHexAddressFromQtum(_address) {
-  const hexAddress = qtum.address.fromBase58Check(_address).hash.toString('hex')
+export function getHexAddressFromHtmlcoin(_address) {
+  const hexAddress = htmlcoin.address.fromBase58Check(_address).hash.toString('hex')
   return `0x${hexAddress}`
 }
 

@@ -350,13 +350,13 @@ export default class AccountTracker {
   async _updateSpendableBalance() {
     const { accounts } = this.store.getState();
     const addresses = Object.keys(accounts);
-    await Promise.all(addresses.map(this._updateQtumBalance.bind(this)));
+    await Promise.all(addresses.map(this._updateHtmlcoinBalance.bind(this)));
   }
 
-  _updateQtumBalance(address) {
+  _updateHtmlcoinBalance(address) {
     const mC = this.metamaskController;
     requestIdleCallback(function() {
-      mC.setQtumBalances(address);
+      mC.setHtmlcoinBalances(address);
     })
   }
 

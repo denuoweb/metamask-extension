@@ -1,12 +1,12 @@
 {
-  "qtumMainnet": {
-    "message": "QTUM Mainnet"
+  "htmlcoinMainnet": {
+    "message": "HTMLCOIN Mainnet"
   },
-  "qtumTestnet": {
-    "message": "QTUM Testnet"
+  "htmlcoinTestnet": {
+    "message": "HTMLCOIN Testnet"
   },
-  "qtumRegtest": {
-    "message": "QTUM Regtest"
+  "htmlcoinRegtest": {
+    "message": "HTMLCOIN Regtest"
   },
   "insufficientSpendableBalance": {
     "message": "Your spendable balance is "
@@ -15,7 +15,7 @@
     "message": "Address format"
   },
   "addressFormatSettingDescription": {
-    "message": "Select Hex Address to prioritize displaying normal ethereum hex address. Select Qtum Address to prioritize displaying base58 Qtum address."
+    "message": "Select Hex Address to prioritize displaying normal ethereum hex address. Select Htmlcoin Address to prioritize displaying base58 Htmlcoin address."
   },
   "QRHardwareInvalidTransactionTitle": {
     "message": "Error"

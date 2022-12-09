@@ -9,28 +9,28 @@ import Tooltip from '../tooltip';
 import CopyIcon from '../icon/copy-icon.component';
 import { useI18nContext } from '../../../hooks/useI18nContext';
 import {
-  getQtumAddressBook,
-  isQtumAddressShow,
+  getHtmlcoinAddressBook,
+  isHtmlcoinAddressShow,
 } from '../../../ducks/metamask/metamask';
 
 export default connect(mapStateToProps)(QrCodeView);
 
 function mapStateToProps(state) {
   const { buyView, warning } = state.appState;
-  const qtumAddressBook = getQtumAddressBook(state);
-  const isQtumAddressShowCheck = isQtumAddressShow(state);
+  const htmlcoinAddressBook = getHtmlcoinAddressBook(state);
+  const isHtmlcoinAddressShowCheck = isHtmlcoinAddressShow(state);
 
   return {
     // Qr code is not fetched from state. 'message' and 'data' props are passed instead.
     buyView,
     warning,
-    qtumAddressBook,
-    isQtumAddressShowCheck,
+    htmlcoinAddressBook,
+    isHtmlcoinAddressShowCheck,
   };
 }
 
 function QrCodeView(props) {
-  const { Qr, warning, qtumAddressBook, isQtumAddressShowCheck } = props;
+  const { Qr, warning, htmlcoinAddressBook, isHtmlcoinAddressShowCheck } = props;
   const { message, data } = Qr;
   const address = `${
     isHexPrefixed(data) ? 'ethereum:' : ''
@@ -74,15 +74,15 @@ function QrCodeView(props) {
           className="qr-code__address-container"
           onClick={() => {
             handleCopy(
-              isQtumAddressShowCheck
-                ? qtumAddressBook[data]
+              isHtmlcoinAddressShowCheck
+                ? htmlcoinAddressBook[data]
                 : toChecksumHexAddress(data),
             );
           }}
         >
           <div className="qr-code__address">
-            {isQtumAddressShowCheck
-              ? qtumAddressBook[data]
+            {isHtmlcoinAddressShowCheck
+              ? htmlcoinAddressBook[data]
               : toChecksumHexAddress(data)}
           </div>
           <div className="qr-code__copy-icon">
@@ -96,8 +96,8 @@ function QrCodeView(props) {
 
 QrCodeView.propTypes = {
   warning: PropTypes.node,
-  qtumAddressBook: PropTypes.object,
-  isQtumAddressShowCheck: PropTypes.bool,
+  htmlcoinAddressBook: PropTypes.object,
+  isHtmlcoinAddressShowCheck: PropTypes.bool,
   Qr: PropTypes.shape({
     message: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),

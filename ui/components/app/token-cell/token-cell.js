@@ -6,7 +6,7 @@ import AssetListItem from '../asset-list-item';
 import { getSelectedAddress } from '../../../selectors';
 import { useI18nContext } from '../../../hooks/useI18nContext';
 import { useTokenFiatAmount } from '../../../hooks/useTokenFiatAmount';
-import { getQtumAddressFromHex, getURLHostName } from '../../../helpers/utils/util';
+import { getHtmlcoinAddressFromHex, getURLHostName } from '../../../helpers/utils/util';
 
 export default function TokenCell({
   address,
@@ -18,7 +18,7 @@ export default function TokenCell({
   isERC721,
 }) {
   const chainId = useSelector(getCurrentChainId);
-  const userAddress = getQtumAddressFromHex(useSelector(getSelectedAddress), chainId);
+  const userAddress = getHtmlcoinAddressFromHex(useSelector(getSelectedAddress), chainId);
   const t = useI18nContext();
 
   const formattedFiat = useTokenFiatAmount(address, string, symbol);
@@ -26,7 +26,7 @@ export default function TokenCell({
     <span>
       {t('troubleTokenBalances')}
       <a
-        href={`https://qtum.info/address/${userAddress}`}
+        href={`https://htmlcoin.info/address/${userAddress}`}
         rel="noopener noreferrer"
         target="_blank"
         onClick={(event) => event.stopPropagation()}

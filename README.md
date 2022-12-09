@@ -1,14 +1,14 @@
-# Metamask with QTUM support
+# Metamask with HTMLCOIN support
 
-This is an alpha version of Metamask with QTUM support
+This is an alpha version of Metamask with HTMLCOIN support
 
-To use Web3 in QTUM Dapps, use `window.qtum` as your Web3 provider instead of `window.ethereum`
+To use Web3 in HTMLCOIN Dapps, use `window.htmlcoin` as your Web3 provider instead of `window.ethereum`
 
-See [Releases](https://github.com/earlgreytech/metamask-extension/releases) for tags/releases with QTUM support
+See [Releases](https://github.com/earlgreytech/metamask-extension/releases) for tags/releases with HTMLCOIN support
 
-See [Janus](https://github.com/qtumproject/janus) for our Web3 compatible API layer
+See [Janus](https://github.com/htmlcoin/janus) for our Web3 compatible API layer
 
-See [qtum-ethers-wrapper](https://github.com/earlgreytech/qtum-ethers) for client-side transaction signing
+See [htmlcoin-ethers-wrapper](https://github.com/earlgreytech/htmlcoin-ethers) for client-side transaction signing
 
 # MetaMask Browser Extension
 

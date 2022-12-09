@@ -40,7 +40,7 @@ export default function reduceMetamask(state = {}, action) {
       showFiatInTestnets: false,
       showTestNetworks: false,
       useNativeCurrencyAsPrimaryCurrency: true,
-      isQtumAddressShow: true,
+      isHtmlcoinAddressShow: true,
     },
     firstTimeFlowType: null,
     completedOnboarding: false,
@@ -48,9 +48,9 @@ export default function reduceMetamask(state = {}, action) {
     participateInMetaMetrics: null,
     nextNonce: null,
     conversionRate: null,
-    nativeCurrency: 'QTUM',
-    qtumBalances: {},
-    qtumAddresses: {},
+    nativeCurrency: 'HTMLCOIN',
+    htmlcoinBalances: {},
+    htmlcoinAddresses: {},
     ...state,
   };
 
@@ -202,7 +202,7 @@ export default function reduceMetamask(state = {}, action) {
       };
     }
 
-    case actionConstants.UPDATE_QTUM_BALANCE: {
+    case actionConstants.UPDATE_HTMLCOIN_BALANCE: {
       return {
         ...metamaskState,
         ...action.value,
@@ -464,18 +464,18 @@ export function doesUserHaveALedgerAccount(state) {
   });
 }
 
-export function getQtumBalances(state) {
-  return state.metamask.qtumBalances;
+export function getHtmlcoinBalances(state) {
+  return state.metamask.htmlcoinBalances;
 }
 
-export function getQtumAddress(state, address) {
-  return state.metamask.qtumAddresses[address];
+export function getHtmlcoinAddress(state, address) {
+  return state.metamask.htmlcoinAddresses[address];
 }
 
-export function getQtumAddressBook(state) {
-  return state.metamask.qtumAddresses;
+export function getHtmlcoinAddressBook(state) {
+  return state.metamask.htmlcoinAddresses;
 }
 
-export function isQtumAddressShow(state) {
-  return state.metamask.preferences.isQtumAddressShow;
+export function isHtmlcoinAddressShow(state) {
+  return state.metamask.preferences.isHtmlcoinAddressShow;
 }

@@ -21,8 +21,8 @@ import {
   getEnsWarning,
 } from '../../../../ducks/ens';
 import {
-  getQtumAddressBook,
-  isQtumAddressShow,
+  getHtmlcoinAddressBook,
+  isHtmlcoinAddressShow,
 } from '../../../../ducks/metamask/metamask';
 import AddRecipient from './add-recipient.component';
 
@@ -38,15 +38,15 @@ function mapStateToProps(state) {
   }
 
   const addressBook = getAddressBook(state);
-  const qtumAddressBook = getQtumAddressBook(state);
-  const isQtumAddressShowCheck = isQtumAddressShow(state);
+  const htmlcoinAddressBook = getHtmlcoinAddressBook(state);
+  const isHtmlcoinAddressShowCheck = isHtmlcoinAddressShow(state);
 
   const ownedAccounts = getMetaMaskAccountsOrdered(state);
 
   return {
     addressBook,
-    qtumAddressBook,
-    isQtumAddressShowCheck,
+    htmlcoinAddressBook,
+    isHtmlcoinAddressShowCheck,
     addressBookEntryName,
     contacts: addressBook.filter(({ name }) => Boolean(name)),
     ensResolution,

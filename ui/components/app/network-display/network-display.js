@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import {
   NETWORK_TYPE_RPC,
   NETWORK_TYPE_TO_ID_MAP,
-  QTUM_PROVIDER_TYPES,
+  HTMLCOIN_PROVIDER_TYPES,
   NETWORK_TO_NAME_MAP,
 } from '../../../../shared/constants/network';
 
@@ -38,12 +38,12 @@ export default function NetworkDisplay({
   let { nickname: networkNickname, type: networkType } =
     targetNetwork ?? currentNetwork;
 
-  let isQtum = null;
-  if (QTUM_PROVIDER_TYPES.includes(networkNickname)) {
-    isQtum = networkNickname;
+  let isHtmlcoin = null;
+  if (HTMLCOIN_PROVIDER_TYPES.includes(networkNickname)) {
+    isHtmlcoin = networkNickname;
     networkNickname = NETWORK_TO_NAME_MAP[networkNickname] || networkNickname;
-  } else if (QTUM_PROVIDER_TYPES.includes(networkType)) {
-    isQtum = networkType || networkNickname;
+  } else if (HTMLCOIN_PROVIDER_TYPES.includes(networkType)) {
+    isHtmlcoin = networkType || networkNickname;
     networkNickname = NETWORK_TO_NAME_MAP[networkType] || networkNickname;
   }
 
@@ -60,7 +60,7 @@ export default function NetworkDisplay({
           <ColorIndicator
             color={
               networkType === NETWORK_TYPE_RPC
-                ? isQtum || COLORS.ICON_MUTED
+                ? isHtmlcoin || COLORS.ICON_MUTED
                 : networkType
             }
             size={indicatorSize}
@@ -68,7 +68,7 @@ export default function NetworkDisplay({
             iconClassName={
               networkType === NETWORK_TYPE_RPC &&
               indicatorSize !== SIZES.XS &&
-              !isQtum
+              !isHtmlcoin
                 ? 'fa fa-question'
                 : undefined
             }

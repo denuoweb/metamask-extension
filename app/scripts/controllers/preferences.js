@@ -30,8 +30,8 @@ export default class PreferencesController {
    */
   constructor(opts = {}) {
     const initState = {
-      qtumBalances: {},
-      qtumAddresses: {},
+      htmlcoinBalances: {},
+      htmlcoinAddresses: {},
       frequentRpcListDetail: [],
       useBlockie: false,
       useNonceField: false,
@@ -63,7 +63,7 @@ export default class PreferencesController {
         showTestNetworks: false,
         useNativeCurrencyAsPrimaryCurrency: true,
         hideZeroBalanceTokens: false,
-        isQtumAddressShow: false,
+        isHtmlcoinAddressShow: false,
       },
       // ENS decentralized website resolution
       ipfsGateway: IPFS_DEFAULT_GATEWAY_URL,
@@ -230,19 +230,19 @@ export default class PreferencesController {
     return textDirection;
   }
 
-  getQtumBalances() {
-    return this.store.getState().qtumBalances;
+  getHtmlcoinBalances() {
+    return this.store.getState().htmlcoinBalances;
   }
 
-  setQtumBalances(address, balances) {
-    const oldBalances = this.getQtumBalances();
+  setHtmlcoinBalances(address, balances) {
+    const oldBalances = this.getHtmlcoinBalances();
 
     oldBalances[address] = {
       ...oldBalances[address],
       ...balances,
     };
 
-    this.store.updateState({ qtumBalances: oldBalances });
+    this.store.updateState({ htmlcoinBalances: oldBalances });
   }
 
   /**
@@ -263,21 +263,21 @@ export default class PreferencesController {
     this.store.updateState({ identities });
   }
 
-  getQtumAddresses() {
-    return this.store.getState().qtumAddresses;
+  getHtmlcoinAddresses() {
+    return this.store.getState().htmlcoinAddresses;
   }
 
   /**
-   * Updates qtumAddresses to only include specified addresses.
+   * Updates htmlcoinAddresses to only include specified addresses.
    *
    * @param {string[]} addresses - An array of hex addresses
    * @param address
-   * @param qtumAddress
+   * @param htmlcoinAddress
    */
-  setQtumAddress(address, qtumAddress) {
-    const { qtumAddresses } = this.store.getState();
-    qtumAddresses[address] = qtumAddress;
-    this.store.updateState({ qtumAddresses });
+  setHtmlcoinAddress(address, htmlcoinAddress) {
+    const { htmlcoinAddresses } = this.store.getState();
+    htmlcoinAddresses[address] = htmlcoinAddress;
+    this.store.updateState({ htmlcoinAddresses });
   }
 
   /**
@@ -305,19 +305,19 @@ export default class PreferencesController {
   }
 
   /**
-   * Removes an qtum address from state
+   * Removes an htmlcoin address from state
    *
    * @param {string} address - A hex address
    * @returns {string} the address that was removed
    */
-  removeQtumAddress(address) {
-    const { qtumAddresses } = this.store.getState();
+  removeHtmlcoinAddress(address) {
+    const { htmlcoinAddresses } = this.store.getState();
 
-    if (!qtumAddresses[address]) {
+    if (!htmlcoinAddresses[address]) {
       throw new Error(`${address} can't be deleted cause it was not found`);
     }
-    delete qtumAddresses[address];
-    this.store.updateState({ qtumAddresses });
+    delete htmlcoinAddresses[address];
+    this.store.updateState({ htmlcoinAddresses });
   }
 
   /**

@@ -15,8 +15,8 @@ export default class AddRecipient extends Component {
     userInput: PropTypes.string,
     ownedAccounts: PropTypes.array,
     addressBook: PropTypes.array,
-    qtumAddressBook: PropTypes.object,
-    isQtumAddressShowCheck: PropTypes.bool,
+    htmlcoinAddressBook: PropTypes.object,
+    isHtmlcoinAddressShowCheck: PropTypes.bool,
     updateRecipient: PropTypes.func,
     ensResolution: PropTypes.string,
     ensError: PropTypes.string,
@@ -138,7 +138,7 @@ export default class AddRecipient extends Component {
   }
 
   renderExplicitAddress(address, name, type) {
-    const { qtumAddressBook, isQtumAddressShowCheck } = this.props;
+    const { htmlcoinAddressBook, isHtmlcoinAddressShowCheck } = this.props;
 
     return (
       <div
@@ -151,16 +151,16 @@ export default class AddRecipient extends Component {
           <div className="send__select-recipient-wrapper__group-item__title">
             {name ? (
               <Confusable input={name} />
-            ) : isQtumAddressShowCheck ? (
-              qtumAddressBook[address]
+            ) : isHtmlcoinAddressShowCheck ? (
+              htmlcoinAddressBook[address]
             ) : (
               ellipsify(address)
             )}
           </div>
           {name && (
             <div className="send__select-recipient-wrapper__group-item__subtitle">
-              {isQtumAddressShowCheck
-                ? qtumAddressBook[address]
+              {isHtmlcoinAddressShowCheck
+                ? htmlcoinAddressBook[address]
                 : ellipsify(address)}
             </div>
           )}
@@ -173,8 +173,8 @@ export default class AddRecipient extends Component {
     let { ownedAccounts } = this.props;
     const {
       userInput,
-      qtumAddressBook,
-      isQtumAddressShowCheck,
+      htmlcoinAddressBook,
+      isHtmlcoinAddressShowCheck,
       useContactListForRecipientSearch,
       isUsingMyAccountsForRecipientSearch,
     } = this.props;
@@ -201,8 +201,8 @@ export default class AddRecipient extends Component {
         <RecipientGroup
           label={t('myAccounts')}
           items={ownedAccounts}
-          qtumAddressBook={qtumAddressBook}
-          isQtumAddressShowCheck={isQtumAddressShowCheck}
+          htmlcoinAddressBook={htmlcoinAddressBook}
+          isHtmlcoinAddressShowCheck={isHtmlcoinAddressShowCheck}
           onSelect={(address, name) =>
             this.selectRecipient(address, name, 'my accounts')
           }
@@ -217,8 +217,8 @@ export default class AddRecipient extends Component {
       userInput,
       ownedAccounts = [],
       addressBook,
-      qtumAddressBook,
-      isQtumAddressShowCheck,
+      htmlcoinAddressBook,
+      isHtmlcoinAddressShowCheck,
       useMyAccountsForRecipientSearch,
     } = this.props;
 
@@ -226,8 +226,8 @@ export default class AddRecipient extends Component {
       <div className="send__select-recipient-wrapper__list">
         <ContactList
           addressBook={addressBook}
-          qtumAddressBook={qtumAddressBook}
-          isQtumAddressShowCheck={isQtumAddressShowCheck}
+          htmlcoinAddressBook={htmlcoinAddressBook}
+          isHtmlcoinAddressShowCheck={isHtmlcoinAddressShowCheck}
           searchForContacts={this.searchForContacts.bind(this)}
           searchForRecents={this.searchForRecents.bind(this)}
           selectRecipient={(address, name) => {
