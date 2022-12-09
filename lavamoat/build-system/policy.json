@@ -5405,6 +5405,11 @@
         "pump>once": true
       }
     },
+    "htmlcoinjs-lib>safe-buffer": {
+      "builtin": {
+        "buffer": true
+      }
+    },
     "ini": {
       "globals": {
         "process": true
@@ -5985,11 +5990,6 @@
     "pumpify>inherits": {
       "builtin": {
         "util.inherits": true
-      }
-    },
-    "htmlcoinjs-lib>safe-buffer": {
-      "builtin": {
-        "buffer": true
       }
     },
     "randomcolor": {
