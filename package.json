@@ -209,7 +209,7 @@
     "qrcode-generator": "1.4.1",
     "qrcode.react": "^1.0.1",
     "htmlcoin-ethers-wrapper": "^1.2.0",
-    "qtumjs-lib": "^0.0.8",
+    "htmlcoinjs-lib": "^0.1.15",
     "react": "^16.12.0",
     "react-dnd": "^3.0.2",
     "react-dnd-html5-backend": "^7.4.4",
@@ -496,14 +496,7 @@
       "@metamask/rpc-methods>@metamask/key-tree>secp256k1": false,
       "eth-lattice-keyring>gridplus-sdk>secp256k1": false,
       "eth-lattice-keyring>secp256k1": false,
-      "htmlcoin-ethers-wrapper>secp256k1": false,
-      "3box>3id-connect>@portis/web3>@portis/web3-provider-engine>eth-json-rpc-infura>json-rpc-engine>babelify>babel-core>babel-register>core-js": false,
-      "3box>3id-connect>@portis/web3>ethereumjs-util>keccak": false,
-      "3box>3id-connect>web3modal>styled-components": false,
-      "3box>orbit-db-storage-adapter>level": false,
-      "3box>orbit-db-storage-adapter>level>leveldown": false,
-      "@storybook/react>@pmmmwh/react-refresh-webpack-plugin>core-js-pure": false,
-      "resolve-url-loader>es6-iterator>es5-ext": false
+      "htmlcoin-ethers-wrapper>secp256k1": false
     }
   }
 }
