@@ -33,8 +33,8 @@
         "@babel/runtime": true,
         "browserify>buffer": true,
         "browserify>process": true,
-        "node-fetch": true,
-        "htmlcoin-ethers-wrapper>elliptic": true
+        "htmlcoin-ethers-wrapper>elliptic": true,
+        "node-fetch": true
       }
     },
     "3box>3box-orbitdb-plugins": {
@@ -860,8 +860,8 @@
       "packages": {
         "bn.js": true,
         "browserify>buffer": true,
-        "pumpify>inherits": true,
-        "htmlcoin-ethers-wrapper>hash.js>minimalistic-assert": true
+        "htmlcoin-ethers-wrapper>hash.js>minimalistic-assert": true,
+        "pumpify>inherits": true
       }
     },
     "3box>ipfs>libp2p-crypto>iso-random-stream": {
@@ -2459,6 +2459,20 @@
     "@eth-optimism/contracts": {
       "packages": {
         "ethers": true
+      }
+    },
+    "@eth-optimism/contracts>@ethersproject/abstract-provider": {
+      "packages": {
+        "ethers>@ethersproject/abi>@ethersproject/bignumber": true,
+        "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/logger": true,
+        "ethers>@ethersproject/properties": true
+      }
+    },
+    "@eth-optimism/contracts>@ethersproject/abstract-signer": {
+      "packages": {
+        "ethers>@ethersproject/logger": true,
+        "ethers>@ethersproject/properties": true
       }
     },
     "@ethereumjs/common": {
@@ -4199,8 +4213,8 @@
     },
     "addons-linter>sha.js": {
       "packages": {
-        "pumpify>inherits": true,
-        "htmlcoinjs-lib>safe-buffer": true
+        "htmlcoinjs-lib>safe-buffer": true,
+        "pumpify>inherits": true
       }
     },
     "analytics-node": {
@@ -4333,13 +4347,13 @@
         "browserify>crypto-browserify>browserify-cipher": true,
         "browserify>crypto-browserify>browserify-sign": true,
         "browserify>crypto-browserify>create-ecdh": true,
+        "browserify>crypto-browserify>create-hmac": true,
         "browserify>crypto-browserify>diffie-hellman": true,
         "browserify>crypto-browserify>pbkdf2": true,
         "browserify>crypto-browserify>public-encrypt": true,
         "browserify>crypto-browserify>randomfill": true,
         "ethereumjs-util>create-hash": true,
-        "ethereumjs-wallet>randombytes": true,
-        "htmlcoinjs-lib>bitcoinjs-lib>create-hmac": true
+        "ethereumjs-wallet>randombytes": true
       }
     },
     "browserify>crypto-browserify>browserify-cipher": {
@@ -4359,8 +4373,8 @@
     },
     "browserify>crypto-browserify>browserify-cipher>browserify-des>des.js": {
       "packages": {
-        "pumpify>inherits": true,
-        "htmlcoin-ethers-wrapper>hash.js>minimalistic-assert": true
+        "htmlcoin-ethers-wrapper>hash.js>minimalistic-assert": true,
+        "pumpify>inherits": true
       }
     },
     "browserify>crypto-browserify>browserify-cipher>evp_bytestokey": {
@@ -4373,13 +4387,13 @@
       "packages": {
         "bn.js": true,
         "browserify>buffer": true,
+        "browserify>crypto-browserify>create-hmac": true,
         "browserify>crypto-browserify>public-encrypt>browserify-rsa": true,
         "browserify>crypto-browserify>public-encrypt>parse-asn1": true,
         "browserify>stream-browserify": true,
         "ethereumjs-util>create-hash": true,
-        "pumpify>inherits": true,
         "htmlcoin-ethers-wrapper>elliptic": true,
-        "htmlcoinjs-lib>bitcoinjs-lib>create-hmac": true
+        "pumpify>inherits": true
       }
     },
     "browserify>crypto-browserify>create-ecdh": {
@@ -4387,6 +4401,16 @@
         "bn.js": true,
         "browserify>buffer": true,
         "htmlcoin-ethers-wrapper>elliptic": true
+      }
+    },
+    "browserify>crypto-browserify>create-hmac": {
+      "packages": {
+        "addons-linter>sha.js": true,
+        "ethereumjs-util>create-hash": true,
+        "ethereumjs-util>create-hash>cipher-base": true,
+        "ethereumjs-util>create-hash>ripemd160": true,
+        "htmlcoinjs-lib>safe-buffer": true,
+        "pumpify>inherits": true
       }
     },
     "browserify>crypto-browserify>diffie-hellman": {
@@ -4450,8 +4474,8 @@
         "bn.js": true,
         "browserify>buffer": true,
         "browserify>vm-browserify": true,
-        "pumpify>inherits": true,
-        "htmlcoin-ethers-wrapper>hash.js>minimalistic-assert": true
+        "htmlcoin-ethers-wrapper>hash.js>minimalistic-assert": true,
+        "pumpify>inherits": true
       }
     },
     "browserify>crypto-browserify>randomfill": {
@@ -5048,9 +5072,9 @@
         "eth-lattice-keyring>gridplus-sdk>superagent": true,
         "ethers>@ethersproject/abi": true,
         "ethers>@ethersproject/keccak256>js-sha3": true,
-        "lodash": true,
         "htmlcoin-ethers-wrapper>elliptic": true,
         "htmlcoin-ethers-wrapper>hash.js": true,
+        "lodash": true,
         "wif>bs58check": true
       }
     },
@@ -5268,7 +5292,7 @@
     "eth-trezor-keyring>hdkey>secp256k1>drbg.js": {
       "packages": {
         "browserify>buffer": true,
-        "htmlcoinjs-lib>bitcoinjs-lib>create-hmac": true
+        "browserify>crypto-browserify>create-hmac": true
       }
     },
     "eth-trezor-keyring>trezor-connect": {
@@ -5358,22 +5382,22 @@
       "packages": {
         "browserify>stream-browserify": true,
         "browserify>string_decoder": true,
-        "pumpify>inherits": true,
-        "htmlcoinjs-lib>safe-buffer": true
+        "htmlcoinjs-lib>safe-buffer": true,
+        "pumpify>inherits": true
       }
     },
     "ethereumjs-util>create-hash>md5.js": {
       "packages": {
         "ethereumjs-util>create-hash>md5.js>hash-base": true,
-        "pumpify>inherits": true,
-        "htmlcoinjs-lib>safe-buffer": true
+        "htmlcoinjs-lib>safe-buffer": true,
+        "pumpify>inherits": true
       }
     },
     "ethereumjs-util>create-hash>md5.js>hash-base": {
       "packages": {
         "ethereumjs-util>create-hash>md5.js>hash-base>readable-stream": true,
-        "pumpify>inherits": true,
-        "htmlcoinjs-lib>safe-buffer": true
+        "htmlcoinjs-lib>safe-buffer": true,
+        "pumpify>inherits": true
       }
     },
     "ethereumjs-util>create-hash>md5.js>hash-base>readable-stream": {
@@ -5398,11 +5422,11 @@
       "packages": {
         "browserify>assert": true,
         "browserify>buffer": true,
+        "browserify>crypto-browserify>create-hmac": true,
         "ethereumjs-util>ethereum-cryptography>keccak": true,
         "ethereumjs-util>ethereum-cryptography>secp256k1": true,
         "ethereumjs-wallet>randombytes": true,
         "htmlcoin-ethers-wrapper>hash.js": true,
-        "htmlcoinjs-lib>bitcoinjs-lib>create-hmac": true,
         "htmlcoinjs-lib>safe-buffer": true,
         "wif>bs58check": true
       }
@@ -5419,8 +5443,8 @@
         "browserify>crypto-browserify>browserify-cipher>evp_bytestokey": true,
         "ethereumjs-util>create-hash>cipher-base": true,
         "ethereumjs-util>ethereum-cryptography>browserify-aes>buffer-xor": true,
-        "pumpify>inherits": true,
-        "htmlcoinjs-lib>safe-buffer": true
+        "htmlcoinjs-lib>safe-buffer": true,
+        "pumpify>inherits": true
       }
     },
     "ethereumjs-util>ethereum-cryptography>browserify-aes>buffer-xor": {
@@ -5579,24 +5603,26 @@
     },
     "ethers>@ethersproject/abi>@ethersproject/address": {
       "packages": {
-        "ethers>@ethersproject/abi>@ethersproject/address>@ethersproject/rlp": true,
         "ethers>@ethersproject/abi>@ethersproject/bignumber": true,
         "ethers>@ethersproject/abi>@ethersproject/keccak256": true,
         "ethers>@ethersproject/bytes": true,
-        "ethers>@ethersproject/logger": true
-      }
-    },
-    "ethers>@ethersproject/abi>@ethersproject/address>@ethersproject/rlp": {
-      "packages": {
-        "ethers>@ethersproject/bytes": true,
-        "ethers>@ethersproject/logger": true
+        "ethers>@ethersproject/logger": true,
+        "ethers>@ethersproject/providers>@ethersproject/rlp": true
       }
     },
     "ethers>@ethersproject/abi>@ethersproject/bignumber": {
       "packages": {
-        "bn.js": true,
+        "ethers>@ethersproject/abi>@ethersproject/bignumber>bn.js": true,
         "ethers>@ethersproject/bytes": true,
         "ethers>@ethersproject/logger": true
+      }
+    },
+    "ethers>@ethersproject/abi>@ethersproject/bignumber>bn.js": {
+      "globals": {
+        "Buffer": true
+      },
+      "packages": {
+        "browserify>browser-resolve": true
       }
     },
     "ethers>@ethersproject/abi>@ethersproject/constants": {
@@ -5628,21 +5654,6 @@
         "ethers>@ethersproject/logger": true
       }
     },
-    "ethers>@ethersproject/abstract-provider": {
-      "packages": {
-        "ethers>@ethersproject/abstract-provider>@ethersproject/bignumber": true,
-        "ethers>@ethersproject/bytes": true,
-        "ethers>@ethersproject/logger": true,
-        "ethers>@ethersproject/properties": true
-      }
-    },
-    "ethers>@ethersproject/abstract-provider>@ethersproject/bignumber": {
-      "packages": {
-        "bn.js": true,
-        "ethers>@ethersproject/bytes": true,
-        "ethers>@ethersproject/logger": true
-      }
-    },
     "ethers>@ethersproject/abstract-signer": {
       "packages": {
         "ethers>@ethersproject/logger": true,
@@ -5651,11 +5662,38 @@
     },
     "ethers>@ethersproject/address": {
       "packages": {
-        "ethers>@ethersproject/bignumber": true,
+        "ethers>@ethersproject/address>@ethersproject/bignumber": true,
+        "ethers>@ethersproject/address>@ethersproject/keccak256": true,
+        "ethers>@ethersproject/address>@ethersproject/rlp": true,
         "ethers>@ethersproject/bytes": true,
-        "ethers>@ethersproject/keccak256": true,
-        "ethers>@ethersproject/logger": true,
-        "ethers>@ethersproject/rlp": true
+        "ethers>@ethersproject/logger": true
+      }
+    },
+    "ethers>@ethersproject/address>@ethersproject/bignumber": {
+      "packages": {
+        "ethers>@ethersproject/address>@ethersproject/bignumber>bn.js": true,
+        "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/logger": true
+      }
+    },
+    "ethers>@ethersproject/address>@ethersproject/bignumber>bn.js": {
+      "globals": {
+        "Buffer": true
+      },
+      "packages": {
+        "browserify>browser-resolve": true
+      }
+    },
+    "ethers>@ethersproject/address>@ethersproject/keccak256": {
+      "packages": {
+        "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/keccak256>js-sha3": true
+      }
+    },
+    "ethers>@ethersproject/address>@ethersproject/rlp": {
+      "packages": {
+        "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/logger": true
       }
     },
     "ethers>@ethersproject/base64": {
@@ -5687,7 +5725,22 @@
     },
     "ethers>@ethersproject/constants": {
       "packages": {
-        "ethers>@ethersproject/bignumber": true
+        "ethers>@ethersproject/constants>@ethersproject/bignumber": true
+      }
+    },
+    "ethers>@ethersproject/constants>@ethersproject/bignumber": {
+      "packages": {
+        "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/constants>@ethersproject/bignumber>bn.js": true,
+        "ethers>@ethersproject/logger": true
+      }
+    },
+    "ethers>@ethersproject/constants>@ethersproject/bignumber>bn.js": {
+      "globals": {
+        "Buffer": true
+      },
+      "packages": {
+        "browserify>browser-resolve": true
       }
     },
     "ethers>@ethersproject/contracts": {
@@ -5695,15 +5748,37 @@
         "setTimeout": true
       },
       "packages": {
-        "ethers>@ethersproject/abi": true,
-        "ethers>@ethersproject/abstract-provider": true,
+        "@eth-optimism/contracts>@ethersproject/abstract-provider": true,
         "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/contracts>@ethersproject/abi": true,
         "ethers>@ethersproject/contracts>@ethersproject/abstract-signer": true,
         "ethers>@ethersproject/contracts>@ethersproject/address": true,
         "ethers>@ethersproject/contracts>@ethersproject/bignumber": true,
         "ethers>@ethersproject/contracts>@ethersproject/transactions": true,
         "ethers>@ethersproject/logger": true,
         "ethers>@ethersproject/properties": true
+      }
+    },
+    "ethers>@ethersproject/contracts>@ethersproject/abi": {
+      "globals": {
+        "console.log": true
+      },
+      "packages": {
+        "ethers>@ethersproject/abi>@ethersproject/hash": true,
+        "ethers>@ethersproject/abi>@ethersproject/strings": true,
+        "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/contracts>@ethersproject/abi>@ethersproject/keccak256": true,
+        "ethers>@ethersproject/contracts>@ethersproject/address": true,
+        "ethers>@ethersproject/contracts>@ethersproject/bignumber": true,
+        "ethers>@ethersproject/contracts>@ethersproject/constants": true,
+        "ethers>@ethersproject/logger": true,
+        "ethers>@ethersproject/properties": true
+      }
+    },
+    "ethers>@ethersproject/contracts>@ethersproject/abi>@ethersproject/keccak256": {
+      "packages": {
+        "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/keccak256>js-sha3": true
       }
     },
     "ethers>@ethersproject/contracts>@ethersproject/abstract-signer": {
@@ -5715,16 +5790,10 @@
     "ethers>@ethersproject/contracts>@ethersproject/address": {
       "packages": {
         "ethers>@ethersproject/bytes": true,
-        "ethers>@ethersproject/contracts>@ethersproject/address>@ethersproject/keccak256": true,
+        "ethers>@ethersproject/contracts>@ethersproject/abi>@ethersproject/keccak256": true,
         "ethers>@ethersproject/contracts>@ethersproject/address>@ethersproject/rlp": true,
         "ethers>@ethersproject/contracts>@ethersproject/bignumber": true,
         "ethers>@ethersproject/logger": true
-      }
-    },
-    "ethers>@ethersproject/contracts>@ethersproject/address>@ethersproject/keccak256": {
-      "packages": {
-        "ethers>@ethersproject/bytes": true,
-        "ethers>@ethersproject/keccak256>js-sha3": true
       }
     },
     "ethers>@ethersproject/contracts>@ethersproject/address>@ethersproject/rlp": {
@@ -5751,8 +5820,8 @@
       },
       "packages": {
         "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/contracts>@ethersproject/abi>@ethersproject/keccak256": true,
         "ethers>@ethersproject/contracts>@ethersproject/address": true,
-        "ethers>@ethersproject/contracts>@ethersproject/address>@ethersproject/keccak256": true,
         "ethers>@ethersproject/contracts>@ethersproject/address>@ethersproject/rlp": true,
         "ethers>@ethersproject/contracts>@ethersproject/bignumber": true,
         "ethers>@ethersproject/contracts>@ethersproject/constants": true,
@@ -5771,35 +5840,97 @@
     },
     "ethers>@ethersproject/hash": {
       "packages": {
-        "ethers>@ethersproject/address": true,
-        "ethers>@ethersproject/bignumber": true,
         "ethers>@ethersproject/bytes": true,
-        "ethers>@ethersproject/keccak256": true,
+        "ethers>@ethersproject/hash>@ethersproject/address": true,
+        "ethers>@ethersproject/hash>@ethersproject/bignumber": true,
+        "ethers>@ethersproject/hash>@ethersproject/keccak256": true,
+        "ethers>@ethersproject/hash>@ethersproject/strings": true,
         "ethers>@ethersproject/logger": true,
-        "ethers>@ethersproject/properties": true,
-        "ethers>@ethersproject/strings": true
+        "ethers>@ethersproject/properties": true
+      }
+    },
+    "ethers>@ethersproject/hash>@ethersproject/address": {
+      "packages": {
+        "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/hash>@ethersproject/address>@ethersproject/rlp": true,
+        "ethers>@ethersproject/hash>@ethersproject/bignumber": true,
+        "ethers>@ethersproject/hash>@ethersproject/keccak256": true,
+        "ethers>@ethersproject/logger": true
+      }
+    },
+    "ethers>@ethersproject/hash>@ethersproject/address>@ethersproject/rlp": {
+      "packages": {
+        "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/logger": true
+      }
+    },
+    "ethers>@ethersproject/hash>@ethersproject/bignumber": {
+      "packages": {
+        "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/hash>@ethersproject/bignumber>bn.js": true,
+        "ethers>@ethersproject/logger": true
+      }
+    },
+    "ethers>@ethersproject/hash>@ethersproject/bignumber>bn.js": {
+      "globals": {
+        "Buffer": true
+      },
+      "packages": {
+        "browserify>browser-resolve": true
+      }
+    },
+    "ethers>@ethersproject/hash>@ethersproject/keccak256": {
+      "packages": {
+        "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/keccak256>js-sha3": true
+      }
+    },
+    "ethers>@ethersproject/hash>@ethersproject/strings": {
+      "packages": {
+        "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/hash>@ethersproject/strings>@ethersproject/constants": true,
+        "ethers>@ethersproject/logger": true
+      }
+    },
+    "ethers>@ethersproject/hash>@ethersproject/strings>@ethersproject/constants": {
+      "packages": {
+        "ethers>@ethersproject/hash>@ethersproject/bignumber": true
       }
     },
     "ethers>@ethersproject/hdnode": {
       "packages": {
-        "ethers>@ethersproject/basex": true,
         "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/hdnode>@ethersproject/basex": true,
         "ethers>@ethersproject/hdnode>@ethersproject/bignumber": true,
         "ethers>@ethersproject/hdnode>@ethersproject/pbkdf2": true,
         "ethers>@ethersproject/hdnode>@ethersproject/sha2": true,
         "ethers>@ethersproject/hdnode>@ethersproject/signing-key": true,
         "ethers>@ethersproject/hdnode>@ethersproject/strings": true,
         "ethers>@ethersproject/hdnode>@ethersproject/transactions": true,
+        "ethers>@ethersproject/hdnode>@ethersproject/wordlists": true,
         "ethers>@ethersproject/logger": true,
-        "ethers>@ethersproject/properties": true,
-        "ethers>@ethersproject/wordlists": true
+        "ethers>@ethersproject/properties": true
+      }
+    },
+    "ethers>@ethersproject/hdnode>@ethersproject/basex": {
+      "packages": {
+        "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/properties": true
       }
     },
     "ethers>@ethersproject/hdnode>@ethersproject/bignumber": {
       "packages": {
-        "bn.js": true,
         "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/hdnode>@ethersproject/bignumber>bn.js": true,
         "ethers>@ethersproject/logger": true
+      }
+    },
+    "ethers>@ethersproject/hdnode>@ethersproject/bignumber>bn.js": {
+      "globals": {
+        "Buffer": true
+      },
+      "packages": {
+        "browserify>browser-resolve": true
       }
     },
     "ethers>@ethersproject/hdnode>@ethersproject/pbkdf2": {
@@ -5836,9 +5967,6 @@
       }
     },
     "ethers>@ethersproject/hdnode>@ethersproject/transactions": {
-      "globals": {
-        "console.log": true
-      },
       "packages": {
         "ethers>@ethersproject/bytes": true,
         "ethers>@ethersproject/hdnode>@ethersproject/bignumber": true,
@@ -5872,97 +6000,46 @@
         "ethers>@ethersproject/logger": true
       }
     },
+    "ethers>@ethersproject/hdnode>@ethersproject/wordlists": {
+      "packages": {
+        "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/hdnode>@ethersproject/strings": true,
+        "ethers>@ethersproject/hdnode>@ethersproject/wordlists>@ethersproject/hash": true,
+        "ethers>@ethersproject/logger": true,
+        "ethers>@ethersproject/properties": true
+      }
+    },
+    "ethers>@ethersproject/hdnode>@ethersproject/wordlists>@ethersproject/hash": {
+      "packages": {
+        "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/hdnode>@ethersproject/bignumber": true,
+        "ethers>@ethersproject/hdnode>@ethersproject/strings": true,
+        "ethers>@ethersproject/hdnode>@ethersproject/transactions>@ethersproject/address": true,
+        "ethers>@ethersproject/hdnode>@ethersproject/transactions>@ethersproject/keccak256": true,
+        "ethers>@ethersproject/logger": true,
+        "ethers>@ethersproject/properties": true
+      }
+    },
     "ethers>@ethersproject/json-wallets": {
       "packages": {
         "3box>ethers>aes-js": true,
+        "ethers>@ethersproject/abi>@ethersproject/address": true,
+        "ethers>@ethersproject/abi>@ethersproject/keccak256": true,
+        "ethers>@ethersproject/abi>@ethersproject/strings": true,
         "ethers>@ethersproject/bytes": true,
-        "ethers>@ethersproject/hdnode": true,
-        "ethers>@ethersproject/json-wallets>@ethersproject/address": true,
-        "ethers>@ethersproject/json-wallets>@ethersproject/keccak256": true,
         "ethers>@ethersproject/json-wallets>@ethersproject/pbkdf2": true,
-        "ethers>@ethersproject/json-wallets>@ethersproject/strings": true,
-        "ethers>@ethersproject/json-wallets>@ethersproject/transactions": true,
         "ethers>@ethersproject/json-wallets>scrypt-js": true,
         "ethers>@ethersproject/logger": true,
         "ethers>@ethersproject/properties": true,
-        "ethers>@ethersproject/random": true
-      }
-    },
-    "ethers>@ethersproject/json-wallets>@ethersproject/address": {
-      "packages": {
-        "ethers>@ethersproject/bytes": true,
-        "ethers>@ethersproject/json-wallets>@ethersproject/address>@ethersproject/bignumber": true,
-        "ethers>@ethersproject/json-wallets>@ethersproject/address>@ethersproject/rlp": true,
-        "ethers>@ethersproject/json-wallets>@ethersproject/keccak256": true,
-        "ethers>@ethersproject/logger": true
-      }
-    },
-    "ethers>@ethersproject/json-wallets>@ethersproject/address>@ethersproject/bignumber": {
-      "packages": {
-        "bn.js": true,
-        "ethers>@ethersproject/bytes": true,
-        "ethers>@ethersproject/logger": true
-      }
-    },
-    "ethers>@ethersproject/json-wallets>@ethersproject/address>@ethersproject/rlp": {
-      "packages": {
-        "ethers>@ethersproject/bytes": true,
-        "ethers>@ethersproject/logger": true
-      }
-    },
-    "ethers>@ethersproject/json-wallets>@ethersproject/keccak256": {
-      "packages": {
-        "ethers>@ethersproject/bytes": true,
-        "ethers>@ethersproject/keccak256>js-sha3": true
+        "ethers>@ethersproject/providers>@ethersproject/transactions": true,
+        "ethers>@ethersproject/wallet>@ethersproject/hdnode": true,
+        "ethers>@ethersproject/wallet>@ethersproject/random": true
       }
     },
     "ethers>@ethersproject/json-wallets>@ethersproject/pbkdf2": {
       "packages": {
         "ethers>@ethersproject/bytes": true,
-        "ethers>@ethersproject/json-wallets>@ethersproject/pbkdf2>@ethersproject/sha2": true
-      }
-    },
-    "ethers>@ethersproject/json-wallets>@ethersproject/pbkdf2>@ethersproject/sha2": {
-      "packages": {
-        "ethers>@ethersproject/bytes": true,
-        "ethers>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>hash.js": true
-      }
-    },
-    "ethers>@ethersproject/json-wallets>@ethersproject/strings": {
-      "packages": {
-        "ethers>@ethersproject/bytes": true,
-        "ethers>@ethersproject/json-wallets>@ethersproject/strings>@ethersproject/constants": true,
-        "ethers>@ethersproject/logger": true
-      }
-    },
-    "ethers>@ethersproject/json-wallets>@ethersproject/strings>@ethersproject/constants": {
-      "packages": {
-        "ethers>@ethersproject/json-wallets>@ethersproject/address>@ethersproject/bignumber": true
-      }
-    },
-    "ethers>@ethersproject/json-wallets>@ethersproject/transactions": {
-      "globals": {
-        "console.log": true
-      },
-      "packages": {
-        "ethers>@ethersproject/bytes": true,
-        "ethers>@ethersproject/json-wallets>@ethersproject/address": true,
-        "ethers>@ethersproject/json-wallets>@ethersproject/address>@ethersproject/bignumber": true,
-        "ethers>@ethersproject/json-wallets>@ethersproject/address>@ethersproject/rlp": true,
-        "ethers>@ethersproject/json-wallets>@ethersproject/keccak256": true,
-        "ethers>@ethersproject/json-wallets>@ethersproject/strings>@ethersproject/constants": true,
-        "ethers>@ethersproject/json-wallets>@ethersproject/transactions>@ethersproject/signing-key": true,
-        "ethers>@ethersproject/logger": true,
-        "ethers>@ethersproject/properties": true
-      }
-    },
-    "ethers>@ethersproject/json-wallets>@ethersproject/transactions>@ethersproject/signing-key": {
-      "packages": {
-        "ethers>@ethersproject/bytes": true,
-        "ethers>@ethersproject/logger": true,
-        "ethers>@ethersproject/properties": true,
-        "htmlcoin-ethers-wrapper>elliptic": true
+        "ethers>@ethersproject/solidity>@ethersproject/sha2": true
       }
     },
     "ethers>@ethersproject/json-wallets>scrypt-js": {
@@ -5993,11 +6070,6 @@
         "console": true
       }
     },
-    "ethers>@ethersproject/networks": {
-      "packages": {
-        "ethers>@ethersproject/logger": true
-      }
-    },
     "ethers>@ethersproject/properties": {
       "packages": {
         "ethers>@ethersproject/logger": true
@@ -6015,67 +6087,34 @@
         "setTimeout": true
       },
       "packages": {
-        "ethers>@ethersproject/abstract-provider": true,
-        "ethers>@ethersproject/basex": true,
+        "@eth-optimism/contracts>@ethersproject/abstract-provider": true,
+        "@eth-optimism/contracts>@ethersproject/abstract-signer": true,
+        "ethers>@ethersproject/abi>@ethersproject/address": true,
+        "ethers>@ethersproject/abi>@ethersproject/bignumber": true,
+        "ethers>@ethersproject/abi>@ethersproject/constants": true,
+        "ethers>@ethersproject/abi>@ethersproject/hash": true,
+        "ethers>@ethersproject/abi>@ethersproject/strings": true,
         "ethers>@ethersproject/bytes": true,
         "ethers>@ethersproject/logger": true,
-        "ethers>@ethersproject/networks": true,
         "ethers>@ethersproject/properties": true,
-        "ethers>@ethersproject/providers>@ethersproject/abstract-signer": true,
-        "ethers>@ethersproject/providers>@ethersproject/address": true,
-        "ethers>@ethersproject/providers>@ethersproject/bignumber": true,
-        "ethers>@ethersproject/providers>@ethersproject/constants": true,
-        "ethers>@ethersproject/providers>@ethersproject/hash": true,
-        "ethers>@ethersproject/providers>@ethersproject/sha2": true,
-        "ethers>@ethersproject/providers>@ethersproject/strings": true,
+        "ethers>@ethersproject/providers>@ethersproject/basex": true,
+        "ethers>@ethersproject/providers>@ethersproject/networks": true,
         "ethers>@ethersproject/providers>@ethersproject/transactions": true,
+        "ethers>@ethersproject/providers>@ethersproject/web": true,
         "ethers>@ethersproject/providers>bech32": true,
-        "ethers>@ethersproject/random": true,
-        "ethers>@ethersproject/web": true
+        "ethers>@ethersproject/solidity>@ethersproject/sha2": true,
+        "ethers>@ethersproject/wallet>@ethersproject/random": true
       }
     },
-    "ethers>@ethersproject/providers>@ethersproject/abstract-signer": {
+    "ethers>@ethersproject/providers>@ethersproject/basex": {
       "packages": {
-        "ethers>@ethersproject/logger": true,
+        "ethers>@ethersproject/bytes": true,
         "ethers>@ethersproject/properties": true
       }
     },
-    "ethers>@ethersproject/providers>@ethersproject/address": {
+    "ethers>@ethersproject/providers>@ethersproject/networks": {
       "packages": {
-        "ethers>@ethersproject/bytes": true,
-        "ethers>@ethersproject/logger": true,
-        "ethers>@ethersproject/providers>@ethersproject/bignumber": true,
-        "ethers>@ethersproject/providers>@ethersproject/hash>@ethersproject/keccak256": true,
-        "ethers>@ethersproject/providers>@ethersproject/rlp": true
-      }
-    },
-    "ethers>@ethersproject/providers>@ethersproject/bignumber": {
-      "packages": {
-        "bn.js": true,
-        "ethers>@ethersproject/bytes": true,
         "ethers>@ethersproject/logger": true
-      }
-    },
-    "ethers>@ethersproject/providers>@ethersproject/constants": {
-      "packages": {
-        "ethers>@ethersproject/providers>@ethersproject/bignumber": true
-      }
-    },
-    "ethers>@ethersproject/providers>@ethersproject/hash": {
-      "packages": {
-        "ethers>@ethersproject/bytes": true,
-        "ethers>@ethersproject/logger": true,
-        "ethers>@ethersproject/properties": true,
-        "ethers>@ethersproject/providers>@ethersproject/address": true,
-        "ethers>@ethersproject/providers>@ethersproject/bignumber": true,
-        "ethers>@ethersproject/providers>@ethersproject/hash>@ethersproject/keccak256": true,
-        "ethers>@ethersproject/providers>@ethersproject/strings": true
-      }
-    },
-    "ethers>@ethersproject/providers>@ethersproject/hash>@ethersproject/keccak256": {
-      "packages": {
-        "ethers>@ethersproject/bytes": true,
-        "ethers>@ethersproject/keccak256>js-sha3": true
       }
     },
     "ethers>@ethersproject/providers>@ethersproject/rlp": {
@@ -6084,42 +6123,40 @@
         "ethers>@ethersproject/logger": true
       }
     },
-    "ethers>@ethersproject/providers>@ethersproject/sha2": {
-      "packages": {
-        "ethers>@ethersproject/bytes": true,
-        "ethers>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>hash.js": true
-      }
-    },
-    "ethers>@ethersproject/providers>@ethersproject/strings": {
-      "packages": {
-        "ethers>@ethersproject/bytes": true,
-        "ethers>@ethersproject/logger": true,
-        "ethers>@ethersproject/providers>@ethersproject/constants": true
-      }
-    },
     "ethers>@ethersproject/providers>@ethersproject/transactions": {
+      "packages": {
+        "ethers>@ethersproject/abi>@ethersproject/address": true,
+        "ethers>@ethersproject/abi>@ethersproject/bignumber": true,
+        "ethers>@ethersproject/abi>@ethersproject/constants": true,
+        "ethers>@ethersproject/abi>@ethersproject/keccak256": true,
+        "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/logger": true,
+        "ethers>@ethersproject/properties": true,
+        "ethers>@ethersproject/providers>@ethersproject/rlp": true,
+        "ethers>@ethersproject/wallet>@ethersproject/hdnode>@ethersproject/signing-key": true
+      }
+    },
+    "ethers>@ethersproject/providers>@ethersproject/web": {
       "globals": {
-        "console.log": true
+        "clearTimeout": true,
+        "fetch": true,
+        "setTimeout": true
       },
       "packages": {
+        "ethers>@ethersproject/abi>@ethersproject/strings": true,
         "ethers>@ethersproject/bytes": true,
         "ethers>@ethersproject/logger": true,
         "ethers>@ethersproject/properties": true,
-        "ethers>@ethersproject/providers>@ethersproject/address": true,
-        "ethers>@ethersproject/providers>@ethersproject/bignumber": true,
-        "ethers>@ethersproject/providers>@ethersproject/constants": true,
-        "ethers>@ethersproject/providers>@ethersproject/hash>@ethersproject/keccak256": true,
-        "ethers>@ethersproject/providers>@ethersproject/rlp": true,
-        "ethers>@ethersproject/providers>@ethersproject/transactions>@ethersproject/signing-key": true
+        "ethers>@ethersproject/providers>@ethersproject/web>@ethersproject/base64": true
       }
     },
-    "ethers>@ethersproject/providers>@ethersproject/transactions>@ethersproject/signing-key": {
+    "ethers>@ethersproject/providers>@ethersproject/web>@ethersproject/base64": {
+      "globals": {
+        "atob": true,
+        "btoa": true
+      },
       "packages": {
-        "ethers>@ethersproject/bytes": true,
-        "ethers>@ethersproject/logger": true,
-        "ethers>@ethersproject/properties": true,
-        "htmlcoin-ethers-wrapper>elliptic": true
+        "ethers>@ethersproject/bytes": true
       }
     },
     "ethers>@ethersproject/random": {
@@ -6154,25 +6191,12 @@
     },
     "ethers>@ethersproject/solidity": {
       "packages": {
+        "ethers>@ethersproject/abi>@ethersproject/bignumber": true,
+        "ethers>@ethersproject/abi>@ethersproject/keccak256": true,
+        "ethers>@ethersproject/abi>@ethersproject/strings": true,
         "ethers>@ethersproject/bytes": true,
         "ethers>@ethersproject/logger": true,
-        "ethers>@ethersproject/solidity>@ethersproject/bignumber": true,
-        "ethers>@ethersproject/solidity>@ethersproject/keccak256": true,
-        "ethers>@ethersproject/solidity>@ethersproject/sha2": true,
-        "ethers>@ethersproject/solidity>@ethersproject/strings": true
-      }
-    },
-    "ethers>@ethersproject/solidity>@ethersproject/bignumber": {
-      "packages": {
-        "bn.js": true,
-        "ethers>@ethersproject/bytes": true,
-        "ethers>@ethersproject/logger": true
-      }
-    },
-    "ethers>@ethersproject/solidity>@ethersproject/keccak256": {
-      "packages": {
-        "ethers>@ethersproject/bytes": true,
-        "ethers>@ethersproject/keccak256>js-sha3": true
+        "ethers>@ethersproject/solidity>@ethersproject/sha2": true
       }
     },
     "ethers>@ethersproject/solidity>@ethersproject/sha2": {
@@ -6182,23 +6206,31 @@
         "htmlcoin-ethers-wrapper>hash.js": true
       }
     },
-    "ethers>@ethersproject/solidity>@ethersproject/strings": {
-      "packages": {
-        "ethers>@ethersproject/bytes": true,
-        "ethers>@ethersproject/logger": true,
-        "ethers>@ethersproject/solidity>@ethersproject/strings>@ethersproject/constants": true
-      }
-    },
-    "ethers>@ethersproject/solidity>@ethersproject/strings>@ethersproject/constants": {
-      "packages": {
-        "ethers>@ethersproject/solidity>@ethersproject/bignumber": true
-      }
-    },
     "ethers>@ethersproject/strings": {
       "packages": {
         "ethers>@ethersproject/bytes": true,
-        "ethers>@ethersproject/constants": true,
-        "ethers>@ethersproject/logger": true
+        "ethers>@ethersproject/logger": true,
+        "ethers>@ethersproject/strings>@ethersproject/constants": true
+      }
+    },
+    "ethers>@ethersproject/strings>@ethersproject/constants": {
+      "packages": {
+        "ethers>@ethersproject/strings>@ethersproject/constants>@ethersproject/bignumber": true
+      }
+    },
+    "ethers>@ethersproject/strings>@ethersproject/constants>@ethersproject/bignumber": {
+      "packages": {
+        "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/logger": true,
+        "ethers>@ethersproject/strings>@ethersproject/constants>@ethersproject/bignumber>bn.js": true
+      }
+    },
+    "ethers>@ethersproject/strings>@ethersproject/constants>@ethersproject/bignumber>bn.js": {
+      "globals": {
+        "Buffer": true
+      },
+      "packages": {
+        "browserify>browser-resolve": true
       }
     },
     "ethers>@ethersproject/transactions": {
@@ -6206,43 +6238,85 @@
         "console.log": true
       },
       "packages": {
-        "ethers>@ethersproject/address": true,
-        "ethers>@ethersproject/bignumber": true,
         "ethers>@ethersproject/bytes": true,
-        "ethers>@ethersproject/constants": true,
-        "ethers>@ethersproject/keccak256": true,
         "ethers>@ethersproject/logger": true,
         "ethers>@ethersproject/properties": true,
-        "ethers>@ethersproject/rlp": true,
-        "ethers>@ethersproject/signing-key": true
+        "ethers>@ethersproject/transactions>@ethersproject/address": true,
+        "ethers>@ethersproject/transactions>@ethersproject/bignumber": true,
+        "ethers>@ethersproject/transactions>@ethersproject/constants": true,
+        "ethers>@ethersproject/transactions>@ethersproject/keccak256": true,
+        "ethers>@ethersproject/transactions>@ethersproject/rlp": true,
+        "ethers>@ethersproject/transactions>@ethersproject/signing-key": true
+      }
+    },
+    "ethers>@ethersproject/transactions>@ethersproject/address": {
+      "packages": {
+        "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/logger": true,
+        "ethers>@ethersproject/transactions>@ethersproject/bignumber": true,
+        "ethers>@ethersproject/transactions>@ethersproject/keccak256": true,
+        "ethers>@ethersproject/transactions>@ethersproject/rlp": true
+      }
+    },
+    "ethers>@ethersproject/transactions>@ethersproject/bignumber": {
+      "packages": {
+        "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/logger": true,
+        "ethers>@ethersproject/transactions>@ethersproject/bignumber>bn.js": true
+      }
+    },
+    "ethers>@ethersproject/transactions>@ethersproject/bignumber>bn.js": {
+      "globals": {
+        "Buffer": true
+      },
+      "packages": {
+        "browserify>browser-resolve": true
+      }
+    },
+    "ethers>@ethersproject/transactions>@ethersproject/constants": {
+      "packages": {
+        "ethers>@ethersproject/transactions>@ethersproject/bignumber": true
+      }
+    },
+    "ethers>@ethersproject/transactions>@ethersproject/keccak256": {
+      "packages": {
+        "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/keccak256>js-sha3": true
+      }
+    },
+    "ethers>@ethersproject/transactions>@ethersproject/rlp": {
+      "packages": {
+        "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/logger": true
+      }
+    },
+    "ethers>@ethersproject/transactions>@ethersproject/signing-key": {
+      "packages": {
+        "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/logger": true,
+        "ethers>@ethersproject/properties": true,
+        "htmlcoin-ethers-wrapper>elliptic": true
       }
     },
     "ethers>@ethersproject/units": {
       "packages": {
-        "ethers>@ethersproject/logger": true,
-        "ethers>@ethersproject/units>@ethersproject/bignumber": true
-      }
-    },
-    "ethers>@ethersproject/units>@ethersproject/bignumber": {
-      "packages": {
-        "bn.js": true,
-        "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/abi>@ethersproject/bignumber": true,
         "ethers>@ethersproject/logger": true
       }
     },
     "ethers>@ethersproject/wallet": {
       "packages": {
-        "ethers>@ethersproject/abstract-provider": true,
+        "@eth-optimism/contracts>@ethersproject/abstract-provider": true,
         "ethers>@ethersproject/bytes": true,
-        "ethers>@ethersproject/hdnode": true,
-        "ethers>@ethersproject/json-wallets": true,
         "ethers>@ethersproject/logger": true,
         "ethers>@ethersproject/properties": true,
-        "ethers>@ethersproject/random": true,
         "ethers>@ethersproject/wallet>@ethersproject/abstract-signer": true,
         "ethers>@ethersproject/wallet>@ethersproject/address": true,
         "ethers>@ethersproject/wallet>@ethersproject/hash": true,
+        "ethers>@ethersproject/wallet>@ethersproject/hdnode": true,
+        "ethers>@ethersproject/wallet>@ethersproject/json-wallets": true,
         "ethers>@ethersproject/wallet>@ethersproject/keccak256": true,
+        "ethers>@ethersproject/wallet>@ethersproject/random": true,
         "ethers>@ethersproject/wallet>@ethersproject/signing-key": true,
         "ethers>@ethersproject/wallet>@ethersproject/transactions": true
       }
@@ -6293,10 +6367,55 @@
         "ethers>@ethersproject/wallet>@ethersproject/transactions>@ethersproject/constants": true
       }
     },
+    "ethers>@ethersproject/wallet>@ethersproject/hdnode": {
+      "packages": {
+        "ethers>@ethersproject/abi>@ethersproject/bignumber": true,
+        "ethers>@ethersproject/abi>@ethersproject/strings": true,
+        "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/json-wallets>@ethersproject/pbkdf2": true,
+        "ethers>@ethersproject/logger": true,
+        "ethers>@ethersproject/properties": true,
+        "ethers>@ethersproject/providers>@ethersproject/basex": true,
+        "ethers>@ethersproject/providers>@ethersproject/transactions": true,
+        "ethers>@ethersproject/solidity>@ethersproject/sha2": true,
+        "ethers>@ethersproject/wallet>@ethersproject/hdnode>@ethersproject/signing-key": true,
+        "ethers>@ethersproject/wallet>@ethersproject/wordlists": true
+      }
+    },
+    "ethers>@ethersproject/wallet>@ethersproject/hdnode>@ethersproject/signing-key": {
+      "packages": {
+        "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/logger": true,
+        "ethers>@ethersproject/properties": true,
+        "htmlcoin-ethers-wrapper>elliptic": true
+      }
+    },
+    "ethers>@ethersproject/wallet>@ethersproject/json-wallets": {
+      "packages": {
+        "3box>ethers>aes-js": true,
+        "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/json-wallets>@ethersproject/pbkdf2": true,
+        "ethers>@ethersproject/json-wallets>scrypt-js": true,
+        "ethers>@ethersproject/logger": true,
+        "ethers>@ethersproject/properties": true,
+        "ethers>@ethersproject/wallet>@ethersproject/address": true,
+        "ethers>@ethersproject/wallet>@ethersproject/hash>@ethersproject/strings": true,
+        "ethers>@ethersproject/wallet>@ethersproject/hdnode": true,
+        "ethers>@ethersproject/wallet>@ethersproject/keccak256": true,
+        "ethers>@ethersproject/wallet>@ethersproject/random": true,
+        "ethers>@ethersproject/wallet>@ethersproject/transactions": true
+      }
+    },
     "ethers>@ethersproject/wallet>@ethersproject/keccak256": {
       "packages": {
         "ethers>@ethersproject/bytes": true,
         "ethers>@ethersproject/keccak256>js-sha3": true
+      }
+    },
+    "ethers>@ethersproject/wallet>@ethersproject/random": {
+      "packages": {
+        "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/logger": true
       }
     },
     "ethers>@ethersproject/wallet>@ethersproject/signing-key": {
@@ -6328,6 +6447,15 @@
         "ethers>@ethersproject/wallet>@ethersproject/bignumber": true
       }
     },
+    "ethers>@ethersproject/wallet>@ethersproject/wordlists": {
+      "packages": {
+        "ethers>@ethersproject/abi>@ethersproject/hash": true,
+        "ethers>@ethersproject/abi>@ethersproject/strings": true,
+        "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/logger": true,
+        "ethers>@ethersproject/properties": true
+      }
+    },
     "ethers>@ethersproject/web": {
       "globals": {
         "clearTimeout": true,
@@ -6335,11 +6463,20 @@
         "setTimeout": true
       },
       "packages": {
-        "ethers>@ethersproject/base64": true,
         "ethers>@ethersproject/bytes": true,
         "ethers>@ethersproject/logger": true,
         "ethers>@ethersproject/properties": true,
+        "ethers>@ethersproject/web>@ethersproject/base64": true,
         "ethers>@ethersproject/web>@ethersproject/strings": true
+      }
+    },
+    "ethers>@ethersproject/web>@ethersproject/base64": {
+      "globals": {
+        "atob": true,
+        "btoa": true
+      },
+      "packages": {
+        "ethers>@ethersproject/bytes": true
       }
     },
     "ethers>@ethersproject/web>@ethersproject/strings": {
@@ -6356,9 +6493,17 @@
     },
     "ethers>@ethersproject/web>@ethersproject/strings>@ethersproject/constants>@ethersproject/bignumber": {
       "packages": {
-        "bn.js": true,
         "ethers>@ethersproject/bytes": true,
-        "ethers>@ethersproject/logger": true
+        "ethers>@ethersproject/logger": true,
+        "ethers>@ethersproject/web>@ethersproject/strings>@ethersproject/constants>@ethersproject/bignumber>bn.js": true
+      }
+    },
+    "ethers>@ethersproject/web>@ethersproject/strings>@ethersproject/constants>@ethersproject/bignumber>bn.js": {
+      "globals": {
+        "Buffer": true
+      },
+      "packages": {
+        "browserify>browser-resolve": true
       }
     },
     "ethers>@ethersproject/wordlists": {
@@ -6398,9 +6543,17 @@
     },
     "ethers>@ethersproject/wordlists>@ethersproject/hash>@ethersproject/bignumber": {
       "packages": {
-        "bn.js": true,
         "ethers>@ethersproject/bytes": true,
-        "ethers>@ethersproject/logger": true
+        "ethers>@ethersproject/logger": true,
+        "ethers>@ethersproject/wordlists>@ethersproject/hash>@ethersproject/bignumber>bn.js": true
+      }
+    },
+    "ethers>@ethersproject/wordlists>@ethersproject/hash>@ethersproject/bignumber>bn.js": {
+      "globals": {
+        "Buffer": true
+      },
+      "packages": {
+        "browserify>browser-resolve": true
       }
     },
     "ethers>@ethersproject/wordlists>@ethersproject/hash>@ethersproject/keccak256": {
@@ -6604,6 +6757,176 @@
     "globalthis>define-properties>has-property-descriptors": {
       "packages": {
         "string.prototype.matchall>get-intrinsic": true
+      }
+    },
+    "htmlcoin-ethers-wrapper": {
+      "globals": {
+        "BigNumber.from": true,
+        "console.error": true,
+        "recoverPublicKey": true,
+        "setTimeout": true
+      },
+      "packages": {
+        "@eth-optimism/contracts>@ethersproject/abstract-provider": true,
+        "@eth-optimism/contracts>@ethersproject/abstract-signer": true,
+        "browserify>buffer": true,
+        "browserify>timers-browserify": true,
+        "ethers": true,
+        "ethers>@ethersproject/abi>@ethersproject/address": true,
+        "ethers>@ethersproject/abi>@ethersproject/hash": true,
+        "ethers>@ethersproject/abi>@ethersproject/keccak256": true,
+        "ethers>@ethersproject/abi>@ethersproject/strings": true,
+        "ethers>@ethersproject/bytes": true,
+        "ethers>@ethersproject/json-wallets": true,
+        "ethers>@ethersproject/logger": true,
+        "ethers>@ethersproject/properties": true,
+        "ethers>@ethersproject/providers>@ethersproject/transactions": true,
+        "ethers>@ethersproject/wallet>@ethersproject/hdnode": true,
+        "ethers>@ethersproject/wallet>@ethersproject/hdnode>@ethersproject/signing-key": true,
+        "ethers>@ethersproject/wallet>@ethersproject/random": true,
+        "htmlcoin-ethers-wrapper>bignumber.js": true,
+        "htmlcoin-ethers-wrapper>bip66": true,
+        "htmlcoin-ethers-wrapper>bn.js": true,
+        "htmlcoin-ethers-wrapper>hash.js": true,
+        "htmlcoin-ethers-wrapper>secp256k1": true,
+        "htmlcoin-ethers-wrapper>varuint-bitcoin": true,
+        "htmlcoinjs-lib>bitcoinjs-lib": true,
+        "wif": true
+      }
+    },
+    "htmlcoin-ethers-wrapper>bignumber.js": {
+      "globals": {
+        "crypto": true,
+        "define": true
+      }
+    },
+    "htmlcoin-ethers-wrapper>bip66": {
+      "packages": {
+        "htmlcoinjs-lib>safe-buffer": true
+      }
+    },
+    "htmlcoin-ethers-wrapper>bn.js": {
+      "globals": {
+        "Buffer": true
+      },
+      "packages": {
+        "browserify>browser-resolve": true
+      }
+    },
+    "htmlcoin-ethers-wrapper>elliptic": {
+      "packages": {
+        "bn.js": true,
+        "htmlcoin-ethers-wrapper>elliptic>brorand": true,
+        "htmlcoin-ethers-wrapper>elliptic>hmac-drbg": true,
+        "htmlcoin-ethers-wrapper>elliptic>minimalistic-crypto-utils": true,
+        "htmlcoin-ethers-wrapper>hash.js": true,
+        "htmlcoin-ethers-wrapper>hash.js>minimalistic-assert": true,
+        "pumpify>inherits": true
+      }
+    },
+    "htmlcoin-ethers-wrapper>elliptic>brorand": {
+      "globals": {
+        "crypto": true,
+        "msCrypto": true
+      },
+      "packages": {
+        "browserify>browser-resolve": true
+      }
+    },
+    "htmlcoin-ethers-wrapper>elliptic>hmac-drbg": {
+      "packages": {
+        "htmlcoin-ethers-wrapper>elliptic>minimalistic-crypto-utils": true,
+        "htmlcoin-ethers-wrapper>hash.js": true,
+        "htmlcoin-ethers-wrapper>hash.js>minimalistic-assert": true
+      }
+    },
+    "htmlcoin-ethers-wrapper>hash.js": {
+      "packages": {
+        "htmlcoin-ethers-wrapper>hash.js>minimalistic-assert": true,
+        "pumpify>inherits": true
+      }
+    },
+    "htmlcoin-ethers-wrapper>pushdata-bitcoin": {
+      "packages": {
+        "htmlcoinjs-lib>bitcoinjs-lib>bitcoin-ops": true
+      }
+    },
+    "htmlcoin-ethers-wrapper>secp256k1": {
+      "packages": {
+        "htmlcoin-ethers-wrapper>elliptic": true
+      }
+    },
+    "htmlcoin-ethers-wrapper>typeforce": {
+      "packages": {
+        "browserify>insert-module-globals>is-buffer": true
+      }
+    },
+    "htmlcoin-ethers-wrapper>varuint-bitcoin": {
+      "packages": {
+        "htmlcoinjs-lib>safe-buffer": true
+      }
+    },
+    "htmlcoinjs-lib": {
+      "packages": {
+        "htmlcoinjs-lib>bignumber.js": true,
+        "htmlcoinjs-lib>bitcoinjs-lib": true,
+        "htmlcoinjs-lib>htmlcoin-opcodes": true,
+        "htmlcoinjs-lib>safe-buffer": true
+      }
+    },
+    "htmlcoinjs-lib>bignumber.js": {
+      "globals": {
+        "crypto": true,
+        "define": true
+      }
+    },
+    "htmlcoinjs-lib>bitcoinjs-lib": {
+      "packages": {
+        "browserify>buffer": true,
+        "browserify>crypto-browserify>create-hmac": true,
+        "browserify>insert-module-globals>is-buffer": true,
+        "ethereumjs-util>create-hash": true,
+        "ethereumjs-wallet>randombytes": true,
+        "ethers>@ethersproject/providers>bech32": true,
+        "htmlcoin-ethers-wrapper>bip66": true,
+        "htmlcoin-ethers-wrapper>pushdata-bitcoin": true,
+        "htmlcoin-ethers-wrapper>typeforce": true,
+        "htmlcoinjs-lib>bitcoinjs-lib>bigi": true,
+        "htmlcoinjs-lib>bitcoinjs-lib>bitcoin-ops": true,
+        "htmlcoinjs-lib>bitcoinjs-lib>ecurve": true,
+        "htmlcoinjs-lib>bitcoinjs-lib>merkle-lib": true,
+        "htmlcoinjs-lib>bitcoinjs-lib>varuint-bitcoin": true,
+        "htmlcoinjs-lib>safe-buffer": true,
+        "wif": true,
+        "wif>bs58check": true
+      }
+    },
+    "htmlcoinjs-lib>bitcoinjs-lib>bigi": {
+      "packages": {
+        "browserify>assert": true,
+        "browserify>buffer": true
+      }
+    },
+    "htmlcoinjs-lib>bitcoinjs-lib>ecurve": {
+      "packages": {
+        "browserify>assert": true,
+        "htmlcoinjs-lib>bitcoinjs-lib>bigi": true,
+        "htmlcoinjs-lib>safe-buffer": true
+      }
+    },
+    "htmlcoinjs-lib>bitcoinjs-lib>merkle-lib": {
+      "packages": {
+        "browserify>buffer": true
+      }
+    },
+    "htmlcoinjs-lib>bitcoinjs-lib>varuint-bitcoin": {
+      "packages": {
+        "htmlcoinjs-lib>safe-buffer": true
+      }
+    },
+    "htmlcoinjs-lib>safe-buffer": {
+      "packages": {
+        "browserify>buffer": true
       }
     },
     "json-rpc-engine": {
@@ -6890,1856 +7213,6 @@
         "prop-types": true,
         "qrcode.react>qr.js": true,
         "react": true
-      }
-    },
-    "htmlcoin-ethers-wrapper": {
-      "globals": {
-        "BigNumber.from": true,
-        "console.error": true,
-        "recoverPublicKey": true,
-        "setTimeout": true
-      },
-      "packages": {
-        "browserify>buffer": true,
-        "browserify>timers-browserify": true,
-        "htmlcoin-ethers-wrapper>bignumber.js": true,
-        "htmlcoin-ethers-wrapper>bip66": true,
-        "htmlcoin-ethers-wrapper>bn.js": true,
-        "htmlcoin-ethers-wrapper>ethers": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abstract-provider": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abstract-signer": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/address": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/keccak256": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/properties": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/random": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/signing-key": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/strings": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions": true,
-        "htmlcoin-ethers-wrapper>hash.js": true,
-        "htmlcoin-ethers-wrapper>secp256k1": true,
-        "htmlcoin-ethers-wrapper>varuint-bitcoin": true,
-        "htmlcoinjs-lib>bitcoinjs-lib": true,
-        "wif": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>bignumber.js": {
-      "globals": {
-        "crypto": true,
-        "define": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>bip66": {
-      "packages": {
-        "htmlcoinjs-lib>safe-buffer": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>bn.js": {
-      "globals": {
-        "Buffer": true
-      },
-      "packages": {
-        "browserify>browser-resolve": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>elliptic": {
-      "packages": {
-        "bn.js": true,
-        "pumpify>inherits": true,
-        "htmlcoin-ethers-wrapper>elliptic>brorand": true,
-        "htmlcoin-ethers-wrapper>elliptic>hmac-drbg": true,
-        "htmlcoin-ethers-wrapper>elliptic>minimalistic-crypto-utils": true,
-        "htmlcoin-ethers-wrapper>hash.js": true,
-        "htmlcoin-ethers-wrapper>hash.js>minimalistic-assert": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>elliptic>brorand": {
-      "globals": {
-        "crypto": true,
-        "msCrypto": true
-      },
-      "packages": {
-        "browserify>browser-resolve": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>elliptic>hmac-drbg": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>elliptic>minimalistic-crypto-utils": true,
-        "htmlcoin-ethers-wrapper>hash.js": true,
-        "htmlcoin-ethers-wrapper>hash.js>minimalistic-assert": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abstract-signer": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/address": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/base64": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/basex": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/constants": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/keccak256": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/properties": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/random": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/rlp": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/sha2": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/signing-key": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/solidity": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/strings": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/units": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/web": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi": {
-      "globals": {
-        "console.log": true
-      },
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/address": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/constants": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/hash": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/keccak256": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/properties": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/strings": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/address": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/address>@ethersproject/rlp": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/keccak256": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/address>@ethersproject/rlp": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/bignumber": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/bignumber>bn.js": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/bignumber>bn.js": {
-      "globals": {
-        "Buffer": true
-      },
-      "packages": {
-        "browserify>browser-resolve": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/bytes": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/constants": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/bignumber": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/hash": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/address": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/keccak256": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/properties": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/strings": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/keccak256": {
-      "packages": {
-        "ethers>@ethersproject/keccak256>js-sha3": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/bytes": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/logger": {
-      "globals": {
-        "console": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/properties": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/strings": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/constants": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abi>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/abstract-provider": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abstract-provider>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abstract-provider>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abstract-provider>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abstract-provider>@ethersproject/properties": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/abstract-provider>@ethersproject/bignumber": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abstract-provider>@ethersproject/bignumber>bn.js": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abstract-provider>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abstract-provider>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/abstract-provider>@ethersproject/bignumber>bn.js": {
-      "globals": {
-        "Buffer": true
-      },
-      "packages": {
-        "browserify>browser-resolve": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/abstract-provider>@ethersproject/bytes": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abstract-provider>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/abstract-provider>@ethersproject/logger": {
-      "globals": {
-        "console": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/abstract-provider>@ethersproject/properties": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abstract-provider>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/abstract-signer": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abstract-signer>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abstract-signer>@ethersproject/properties": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/abstract-signer>@ethersproject/logger": {
-      "globals": {
-        "console": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/abstract-signer>@ethersproject/properties": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/abstract-signer>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/address": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/address>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/address>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/address>@ethersproject/keccak256": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/address>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/address>@ethersproject/rlp": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/address>@ethersproject/bignumber": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/address>@ethersproject/bignumber>bn.js": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/address>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/address>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/address>@ethersproject/bignumber>bn.js": {
-      "globals": {
-        "Buffer": true
-      },
-      "packages": {
-        "browserify>browser-resolve": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/address>@ethersproject/bytes": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/address>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/address>@ethersproject/keccak256": {
-      "packages": {
-        "ethers>@ethersproject/keccak256>js-sha3": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/address>@ethersproject/bytes": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/address>@ethersproject/logger": {
-      "globals": {
-        "console": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/address>@ethersproject/rlp": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/address>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/address>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/base64": {
-      "globals": {
-        "atob": true,
-        "btoa": true
-      },
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/base64>@ethersproject/bytes": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/base64>@ethersproject/bytes": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/base64>@ethersproject/bytes>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/base64>@ethersproject/bytes>@ethersproject/logger": {
-      "globals": {
-        "console": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/basex": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/basex>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/basex>@ethersproject/properties": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/basex>@ethersproject/bytes": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/basex>@ethersproject/bytes>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/basex>@ethersproject/bytes>@ethersproject/logger": {
-      "globals": {
-        "console": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/basex>@ethersproject/properties": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/basex>@ethersproject/bytes>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/bignumber": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/bignumber>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/bignumber>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/bignumber>bn.js": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/bignumber>@ethersproject/bytes": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/bignumber>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/bignumber>@ethersproject/logger": {
-      "globals": {
-        "console": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/bignumber>bn.js": {
-      "globals": {
-        "Buffer": true
-      },
-      "packages": {
-        "browserify>browser-resolve": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/bytes": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/bytes>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/bytes>@ethersproject/logger": {
-      "globals": {
-        "console": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/constants": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/constants>@ethersproject/bignumber": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/constants>@ethersproject/bignumber": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/constants>@ethersproject/bignumber>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/constants>@ethersproject/bignumber>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/constants>@ethersproject/bignumber>bn.js": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/constants>@ethersproject/bignumber>@ethersproject/bytes": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/constants>@ethersproject/bignumber>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/constants>@ethersproject/bignumber>@ethersproject/logger": {
-      "globals": {
-        "console": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/constants>@ethersproject/bignumber>bn.js": {
-      "globals": {
-        "Buffer": true
-      },
-      "packages": {
-        "browserify>browser-resolve": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts": {
-      "globals": {
-        "setTimeout": true
-      },
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/abi": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/abstract-provider": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/abstract-signer": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/address": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/properties": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/transactions": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/abi": {
-      "globals": {
-        "console.log": true
-      },
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/abi>@ethersproject/hash": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/abi>@ethersproject/keccak256": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/abi>@ethersproject/strings": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/address": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/constants": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/properties": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/abi>@ethersproject/hash": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/abi>@ethersproject/keccak256": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/abi>@ethersproject/strings": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/address": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/properties": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/abi>@ethersproject/keccak256": {
-      "packages": {
-        "ethers>@ethersproject/keccak256>js-sha3": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/bytes": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/abi>@ethersproject/strings": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/constants": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/abstract-provider": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/properties": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/abstract-signer": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/properties": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/address": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/abi>@ethersproject/keccak256": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/address>@ethersproject/rlp": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/address>@ethersproject/rlp": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/bignumber": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/bignumber>bn.js": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/bignumber>bn.js": {
-      "globals": {
-        "Buffer": true
-      },
-      "packages": {
-        "browserify>browser-resolve": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/bytes": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/constants": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/bignumber": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/logger": {
-      "globals": {
-        "console": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/properties": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/transactions": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/abi>@ethersproject/keccak256": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/address": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/address>@ethersproject/rlp": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/constants": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/properties": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/transactions>@ethersproject/signing-key": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/transactions>@ethersproject/signing-key": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>elliptic": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/contracts>@ethersproject/properties": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/address": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/keccak256": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/properties": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/strings": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/address": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/address>@ethersproject/rlp": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/keccak256": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/address>@ethersproject/rlp": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/bignumber": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/bignumber>bn.js": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/bignumber>bn.js": {
-      "globals": {
-        "Buffer": true
-      },
-      "packages": {
-        "browserify>browser-resolve": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/bytes": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/keccak256": {
-      "packages": {
-        "ethers>@ethersproject/keccak256>js-sha3": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/bytes": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/logger": {
-      "globals": {
-        "console": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/properties": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/strings": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/strings>@ethersproject/constants": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/strings>@ethersproject/constants": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hash>@ethersproject/bignumber": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/basex": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/pbkdf2": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/properties": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/sha2": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/signing-key": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/strings": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/transactions": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/wordlists": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/basex": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/properties": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/bignumber": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/bignumber>bn.js": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/bignumber>bn.js": {
-      "globals": {
-        "Buffer": true
-      },
-      "packages": {
-        "browserify>browser-resolve": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/bytes": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/logger": {
-      "globals": {
-        "console": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/pbkdf2": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/sha2": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/properties": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/sha2": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>hash.js": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/signing-key": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>elliptic": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/properties": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/strings": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/strings>@ethersproject/constants": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/strings>@ethersproject/constants": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/bignumber": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/transactions": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/properties": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/signing-key": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/strings>@ethersproject/constants": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/transactions>@ethersproject/address": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/transactions>@ethersproject/keccak256": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/transactions>@ethersproject/rlp": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/transactions>@ethersproject/address": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/transactions>@ethersproject/keccak256": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/transactions>@ethersproject/rlp": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/transactions>@ethersproject/keccak256": {
-      "packages": {
-        "ethers>@ethersproject/keccak256>js-sha3": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/bytes": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/transactions>@ethersproject/rlp": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/wordlists": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/properties": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/strings": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/wordlists>@ethersproject/hash": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/wordlists>@ethersproject/hash": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/properties": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/strings": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/transactions>@ethersproject/address": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/hdnode>@ethersproject/transactions>@ethersproject/keccak256": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets": {
-      "packages": {
-        "3box>ethers>aes-js": true,
-        "ethers>@ethersproject/json-wallets>scrypt-js": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/address": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/hdnode": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/keccak256": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/pbkdf2": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/properties": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/random": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/strings": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/transactions": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/address": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/address>@ethersproject/rlp": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/hdnode>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/keccak256": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/address>@ethersproject/rlp": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/bytes": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/hdnode": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/hdnode>@ethersproject/basex": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/hdnode>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/hdnode>@ethersproject/signing-key": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/hdnode>@ethersproject/wordlists": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/pbkdf2": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/pbkdf2>@ethersproject/sha2": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/properties": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/strings": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/transactions": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/hdnode>@ethersproject/basex": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/properties": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/hdnode>@ethersproject/bignumber": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/hdnode>@ethersproject/bignumber>bn.js": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/hdnode>@ethersproject/bignumber>bn.js": {
-      "globals": {
-        "Buffer": true
-      },
-      "packages": {
-        "browserify>browser-resolve": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/hdnode>@ethersproject/signing-key": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>elliptic": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/properties": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/hdnode>@ethersproject/wordlists": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/hdnode>@ethersproject/wordlists>@ethersproject/hash": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/properties": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/strings": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/hdnode>@ethersproject/wordlists>@ethersproject/hash": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/address": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/hdnode>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/keccak256": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/properties": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/strings": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/keccak256": {
-      "packages": {
-        "ethers>@ethersproject/keccak256>js-sha3": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/bytes": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/logger": {
-      "globals": {
-        "console": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/pbkdf2": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/pbkdf2>@ethersproject/sha2": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/pbkdf2>@ethersproject/sha2": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>hash.js": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/properties": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/random": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/strings": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/strings>@ethersproject/constants": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/strings>@ethersproject/constants": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/hdnode>@ethersproject/bignumber": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/transactions": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/address": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/address>@ethersproject/rlp": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/hdnode>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/hdnode>@ethersproject/signing-key": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/keccak256": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/properties": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/json-wallets>@ethersproject/strings>@ethersproject/constants": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/keccak256": {
-      "packages": {
-        "ethers>@ethersproject/keccak256>js-sha3": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/keccak256>@ethersproject/bytes": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/keccak256>@ethersproject/bytes": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/keccak256>@ethersproject/bytes>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/keccak256>@ethersproject/bytes>@ethersproject/logger": {
-      "globals": {
-        "console": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/logger": {
-      "globals": {
-        "console": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/properties": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/properties>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/properties>@ethersproject/logger": {
-      "globals": {
-        "console": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers": {
-      "globals": {
-        "WebSocket": true,
-        "clearInterval": true,
-        "clearTimeout": true,
-        "console.log": true,
-        "console.warn": true,
-        "name": true,
-        "setInterval": true,
-        "setTimeout": true
-      },
-      "packages": {
-        "ethers>@ethersproject/providers>bech32": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/abstract-provider": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/abstract-signer": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/address": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/basex": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/constants": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/hash": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/networks": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/properties": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/random": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/sha2": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/strings": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/transactions": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/web": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/abstract-provider": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/properties": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/abstract-signer": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/properties": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/address": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/hash>@ethersproject/keccak256": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/rlp": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/basex": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/properties": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/bignumber": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/bignumber>bn.js": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/bignumber>bn.js": {
-      "globals": {
-        "Buffer": true
-      },
-      "packages": {
-        "browserify>browser-resolve": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/bytes": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/constants": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/bignumber": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/hash": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/address": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/hash>@ethersproject/keccak256": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/properties": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/strings": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/hash>@ethersproject/keccak256": {
-      "packages": {
-        "ethers>@ethersproject/keccak256>js-sha3": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/bytes": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/logger": {
-      "globals": {
-        "console": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/networks": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/properties": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/random": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/rlp": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/sha2": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>hash.js": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/strings": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/constants": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/transactions": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/address": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/constants": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/hash>@ethersproject/keccak256": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/properties": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/rlp": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/transactions>@ethersproject/signing-key": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/transactions>@ethersproject/signing-key": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>elliptic": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/properties": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/web": {
-      "globals": {
-        "clearTimeout": true,
-        "fetch": true,
-        "setTimeout": true
-      },
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/properties": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/strings": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/web>@ethersproject/base64": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/web>@ethersproject/base64": {
-      "globals": {
-        "atob": true,
-        "btoa": true
-      },
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/providers>@ethersproject/bytes": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/random": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/random>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/random>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/random>@ethersproject/bytes": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/random>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/random>@ethersproject/logger": {
-      "globals": {
-        "console": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/rlp": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/rlp>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/rlp>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/rlp>@ethersproject/bytes": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/rlp>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/rlp>@ethersproject/logger": {
-      "globals": {
-        "console": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/sha2": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/sha2>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/sha2>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>hash.js": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/sha2>@ethersproject/bytes": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/sha2>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/sha2>@ethersproject/logger": {
-      "globals": {
-        "console": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/signing-key": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>elliptic": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/signing-key>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/signing-key>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/signing-key>@ethersproject/properties": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/signing-key>@ethersproject/bytes": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/signing-key>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/signing-key>@ethersproject/logger": {
-      "globals": {
-        "console": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/signing-key>@ethersproject/properties": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/signing-key>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/solidity": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/solidity>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/solidity>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/solidity>@ethersproject/keccak256": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/solidity>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/solidity>@ethersproject/sha2": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/solidity>@ethersproject/strings": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/solidity>@ethersproject/bignumber": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/solidity>@ethersproject/bignumber>bn.js": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/solidity>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/solidity>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/solidity>@ethersproject/bignumber>bn.js": {
-      "globals": {
-        "Buffer": true
-      },
-      "packages": {
-        "browserify>browser-resolve": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/solidity>@ethersproject/bytes": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/solidity>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/solidity>@ethersproject/keccak256": {
-      "packages": {
-        "ethers>@ethersproject/keccak256>js-sha3": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/solidity>@ethersproject/bytes": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/solidity>@ethersproject/logger": {
-      "globals": {
-        "console": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/solidity>@ethersproject/sha2": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/solidity>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/solidity>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>hash.js": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/solidity>@ethersproject/strings": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/solidity>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/solidity>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/solidity>@ethersproject/strings>@ethersproject/constants": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/solidity>@ethersproject/strings>@ethersproject/constants": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/solidity>@ethersproject/bignumber": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/strings": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/strings>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/strings>@ethersproject/constants": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/strings>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/strings>@ethersproject/bytes": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/strings>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/strings>@ethersproject/constants": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/strings>@ethersproject/constants>@ethersproject/bignumber": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/strings>@ethersproject/constants>@ethersproject/bignumber": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/strings>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/strings>@ethersproject/constants>@ethersproject/bignumber>bn.js": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/strings>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/strings>@ethersproject/constants>@ethersproject/bignumber>bn.js": {
-      "globals": {
-        "Buffer": true
-      },
-      "packages": {
-        "browserify>browser-resolve": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/strings>@ethersproject/logger": {
-      "globals": {
-        "console": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions": {
-      "globals": {
-        "console.log": true
-      },
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/address": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/constants": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/keccak256": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/properties": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/rlp": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/signing-key": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/address": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/keccak256": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/rlp": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/bignumber": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/bignumber>bn.js": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/bignumber>bn.js": {
-      "globals": {
-        "Buffer": true
-      },
-      "packages": {
-        "browserify>browser-resolve": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/bytes": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/constants": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/bignumber": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/keccak256": {
-      "packages": {
-        "ethers>@ethersproject/keccak256>js-sha3": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/bytes": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/logger": {
-      "globals": {
-        "console": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/properties": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/rlp": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/signing-key": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>elliptic": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/transactions>@ethersproject/properties": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/units": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/units>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/units>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/units>@ethersproject/bignumber": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/units>@ethersproject/bignumber>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/units>@ethersproject/bignumber>bn.js": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/units>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/units>@ethersproject/bignumber>@ethersproject/bytes": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/units>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/units>@ethersproject/bignumber>bn.js": {
-      "globals": {
-        "Buffer": true
-      },
-      "packages": {
-        "browserify>browser-resolve": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/units>@ethersproject/logger": {
-      "globals": {
-        "console": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/abstract-provider": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/abstract-signer": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/address": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/hash": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/hdnode": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/json-wallets": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/keccak256": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/properties": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/random": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/signing-key": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/transactions": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/abstract-provider": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/properties": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/abstract-signer": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/properties": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/address": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/address>@ethersproject/rlp": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/keccak256": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/address>@ethersproject/rlp": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/bignumber": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/bignumber>bn.js": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/bignumber>bn.js": {
-      "globals": {
-        "Buffer": true
-      },
-      "packages": {
-        "browserify>browser-resolve": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/bytes": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/hash": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/address": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/hash>@ethersproject/strings": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/keccak256": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/properties": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/hash>@ethersproject/strings": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/transactions>@ethersproject/constants": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/hdnode": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/hash>@ethersproject/strings": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/hdnode>@ethersproject/basex": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/hdnode>@ethersproject/pbkdf2": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/hdnode>@ethersproject/sha2": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/properties": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/signing-key": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/transactions": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/wordlists": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/hdnode>@ethersproject/basex": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/properties": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/hdnode>@ethersproject/pbkdf2": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/hdnode>@ethersproject/sha2": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/hdnode>@ethersproject/sha2": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>hash.js": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/json-wallets": {
-      "packages": {
-        "3box>ethers>aes-js": true,
-        "ethers>@ethersproject/json-wallets>scrypt-js": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/address": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/hash>@ethersproject/strings": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/hdnode": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/hdnode>@ethersproject/pbkdf2": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/keccak256": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/properties": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/random": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/transactions": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/keccak256": {
-      "packages": {
-        "ethers>@ethersproject/keccak256>js-sha3": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/bytes": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/logger": {
-      "globals": {
-        "console": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/properties": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/random": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/signing-key": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>elliptic": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/properties": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/transactions": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/address": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/address>@ethersproject/rlp": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/keccak256": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/properties": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/signing-key": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/transactions>@ethersproject/constants": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/transactions>@ethersproject/constants": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/bignumber": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/wordlists": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/hash": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/hash>@ethersproject/strings": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wallet>@ethersproject/properties": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/web": {
-      "globals": {
-        "clearTimeout": true,
-        "fetch": true,
-        "setTimeout": true
-      },
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/web>@ethersproject/base64": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/web>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/web>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/web>@ethersproject/properties": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/web>@ethersproject/strings": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/web>@ethersproject/base64": {
-      "globals": {
-        "atob": true,
-        "btoa": true
-      },
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/web>@ethersproject/bytes": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/web>@ethersproject/bytes": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/web>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/web>@ethersproject/logger": {
-      "globals": {
-        "console": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/web>@ethersproject/properties": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/web>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/web>@ethersproject/strings": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/web>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/web>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/web>@ethersproject/strings>@ethersproject/constants": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/web>@ethersproject/strings>@ethersproject/constants": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/web>@ethersproject/strings>@ethersproject/constants>@ethersproject/bignumber": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/web>@ethersproject/strings>@ethersproject/constants>@ethersproject/bignumber": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/web>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/web>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/web>@ethersproject/strings>@ethersproject/constants>@ethersproject/bignumber>bn.js": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/web>@ethersproject/strings>@ethersproject/constants>@ethersproject/bignumber>bn.js": {
-      "globals": {
-        "Buffer": true
-      },
-      "packages": {
-        "browserify>browser-resolve": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/hash": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/properties": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/strings": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/bytes": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/hash": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/hash>@ethersproject/address": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/hash>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/hash>@ethersproject/keccak256": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/properties": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/strings": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/hash>@ethersproject/address": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/hash>@ethersproject/address>@ethersproject/rlp": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/hash>@ethersproject/bignumber": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/hash>@ethersproject/keccak256": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/hash>@ethersproject/address>@ethersproject/rlp": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/hash>@ethersproject/bignumber": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/hash>@ethersproject/bignumber>bn.js": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/hash>@ethersproject/bignumber>bn.js": {
-      "globals": {
-        "Buffer": true
-      },
-      "packages": {
-        "browserify>browser-resolve": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/hash>@ethersproject/keccak256": {
-      "packages": {
-        "ethers>@ethersproject/keccak256>js-sha3": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/bytes": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/logger": {
-      "globals": {
-        "console": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/properties": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/logger": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/strings": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/bytes": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/logger": true,
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/strings>@ethersproject/constants": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/strings>@ethersproject/constants": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>ethers>@ethersproject/wordlists>@ethersproject/hash>@ethersproject/bignumber": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>hash.js": {
-      "packages": {
-        "pumpify>inherits": true,
-        "htmlcoin-ethers-wrapper>hash.js>minimalistic-assert": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>pushdata-bitcoin": {
-      "packages": {
-        "htmlcoinjs-lib>bitcoinjs-lib>bitcoin-ops": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>secp256k1": {
-      "packages": {
-        "htmlcoin-ethers-wrapper>elliptic": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>typeforce": {
-      "packages": {
-        "browserify>insert-module-globals>is-buffer": true
-      }
-    },
-    "htmlcoin-ethers-wrapper>varuint-bitcoin": {
-      "packages": {
-        "htmlcoinjs-lib>safe-buffer": true
-      }
-    },
-    "htmlcoinjs-lib": {
-      "packages": {
-        "bignumber.js": true,
-        "htmlcoinjs-lib>bitcoinjs-lib": true,
-        "htmlcoinjs-lib>htmlcoin-opcodes": true,
-        "htmlcoinjs-lib>safe-buffer": true
-      }
-    },
-    "htmlcoinjs-lib>bitcoinjs-lib": {
-      "packages": {
-        "browserify>buffer": true,
-        "browserify>insert-module-globals>is-buffer": true,
-        "ethereumjs-util>create-hash": true,
-        "ethereumjs-wallet>randombytes": true,
-        "ethers>@ethersproject/providers>bech32": true,
-        "htmlcoin-ethers-wrapper>bip66": true,
-        "htmlcoin-ethers-wrapper>pushdata-bitcoin": true,
-        "htmlcoin-ethers-wrapper>typeforce": true,
-        "htmlcoinjs-lib>bitcoinjs-lib>bigi": true,
-        "htmlcoinjs-lib>bitcoinjs-lib>bitcoin-ops": true,
-        "htmlcoinjs-lib>bitcoinjs-lib>create-hmac": true,
-        "htmlcoinjs-lib>bitcoinjs-lib>ecurve": true,
-        "htmlcoinjs-lib>bitcoinjs-lib>merkle-lib": true,
-        "htmlcoinjs-lib>bitcoinjs-lib>varuint-bitcoin": true,
-        "htmlcoinjs-lib>safe-buffer": true,
-        "wif": true,
-        "wif>bs58check": true
-      }
-    },
-    "htmlcoinjs-lib>bitcoinjs-lib>bigi": {
-      "packages": {
-        "browserify>assert": true,
-        "browserify>buffer": true
-      }
-    },
-    "htmlcoinjs-lib>bitcoinjs-lib>create-hmac": {
-      "packages": {
-        "addons-linter>sha.js": true,
-        "ethereumjs-util>create-hash": true,
-        "ethereumjs-util>create-hash>cipher-base": true,
-        "ethereumjs-util>create-hash>ripemd160": true,
-        "pumpify>inherits": true,
-        "htmlcoinjs-lib>safe-buffer": true
-      }
-    },
-    "htmlcoinjs-lib>bitcoinjs-lib>ecurve": {
-      "packages": {
-        "browserify>assert": true,
-        "htmlcoinjs-lib>bitcoinjs-lib>bigi": true,
-        "htmlcoinjs-lib>safe-buffer": true
-      }
-    },
-    "htmlcoinjs-lib>bitcoinjs-lib>merkle-lib": {
-      "packages": {
-        "browserify>buffer": true
-      }
-    },
-    "htmlcoinjs-lib>bitcoinjs-lib>varuint-bitcoin": {
-      "packages": {
-        "htmlcoinjs-lib>safe-buffer": true
-      }
-    },
-    "htmlcoinjs-lib>safe-buffer": {
-      "packages": {
-        "browserify>buffer": true
       }
     },
     "react": {

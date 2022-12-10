@@ -47,7 +47,7 @@ if (process.env.IN_TEST) {
   defaultProviderConfigOpts = {
     type: NETWORK_TYPE_RPC,
     rpcUrl: 'http://localhost:8545',
-    chainId: '0x539',
+    chainId: '0x115C',
     nickname: 'Localhost 8545',
   };
 } else if (process.env.METAMASK_DEBUG || env === 'test') {
@@ -62,7 +62,7 @@ if (process.env.IN_TEST) {
     rpcUrl: HTMLCOIN_TESTNET_RPC_URL,
     nickname: HTMLCOIN_TESTNET,
     rpcPrefs: {
-      blockExplorerUrl: "https://testnet.htmlcoin.info/",
+      blockExplorerUrl: "https://testnet.htmlcoin.com/",
     },
   };
   // defaultProviderConfigOpts = { type: NETWORK_TYPE_RPC, chainId: HTMLCOIN_REGTEST_CHAIN_ID, rpcUrl: HTMLCOIN_REGTEST_RPC_URL };
@@ -74,7 +74,7 @@ if (process.env.IN_TEST) {
     rpcUrl: HTMLCOIN_TESTNET_RPC_URL,
     nickname: HTMLCOIN_TESTNET,
     rpcPrefs: {
-      blockExplorerUrl: "https://testnet.htmlcoin.info/",
+      blockExplorerUrl: "https://testnet.htmlcoin.com/",
     },
   };
   // defaultProviderConfigOpts = { type: NETWORK_TYPE_RPC, chainId: HTMLCOIN_MAINNET_CHAIN_ID, rpcUrl: HTMLCOIN_MAINNET_RPC_URL };
@@ -82,7 +82,7 @@ if (process.env.IN_TEST) {
 
 const defaultProviderConfig = {
   // ticker: 'ETH',
-  ticker: 'HTMLCOIN',
+  ticker: 'HTML',
   ...defaultProviderConfigOpts,
 };
 
@@ -340,12 +340,12 @@ export default class NetworkController extends EventEmitter {
     );
     const { chainId } = NETWORK_TYPE_TO_ID_MAP[type];
     let rpcUrl = '';
-    let ticker = 'HTMLCOIN';
+    let ticker = 'HTML';
     const providerType = type;
     if (HTMLCOIN_PROVIDER_TYPES.includes(type)) {
       type = NETWORK_TYPE_RPC;
       rpcUrl = CHAIN_ID_TO_RPC_URL_MAP[chainId];
-      ticker = 'HTMLCOIN';
+      ticker = 'HTML';
     }
     this.setProviderConfig({
       labelKey: providerType,

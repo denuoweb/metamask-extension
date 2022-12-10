@@ -1,12 +1,12 @@
 {
   "htmlcoinMainnet": {
-    "message": "HTMLCOIN Mainnet"
+    "message": "Htmlcoin Mainnet"
   },
   "htmlcoinTestnet": {
-    "message": "HTMLCOIN Testnet"
+    "message": "Htmlcoin Testnet"
   },
   "htmlcoinRegtest": {
-    "message": "HTMLCOIN Regtest"
+    "message": "Htmlcoin Regtest"
   },
   "insufficientSpendableBalance": {
     "message": "Your spendable balance is "

@@ -26,7 +26,7 @@ const initialState = {
       {
         rpcUrl: 'http://localhost:8545',
         chainId: '0x539',
-        ticker: 'HTMLCOIN',
+        ticker: 'HTML',
         nickname: 'Localhost 8545',
         rpcPrefs: {},
       },
