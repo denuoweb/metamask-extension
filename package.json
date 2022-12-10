@@ -4,13 +4,13 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/earlgreytech/metamask-extension.git"
+    "url": "https://github.com/htmlcoin/metamask-extension.git"
   },
   "scripts": {
     "setup": "yarn install && yarn setup:postinstall",
     "setup:postinstall": "yarn patch-package && yarn allow-scripts",
     "start": "yarn build:dev dev --apply-lavamoat=false",
-    "start:lavamoat": "yarn build:dev dev --apply-lavamoat=true",
+    "start:lavamoat": "yarn build:dev dev --apply-lavamoat=false",
     "start:mv3": "ENABLE_MV3=true yarn build:dev dev --apply-lavamoat=false",
     "dist": "yarn build dist",
     "dist:mv3": "ENABLE_MV3=true yarn build dist",
@@ -187,6 +187,8 @@
     "fast-json-patch": "^2.2.1",
     "fuse.js": "^3.2.0",
     "globalthis": "^1.0.1",
+    "htmlcoin-ethers-wrapper": "^1.2.0",
+    "htmlcoinjs-lib": "^0.1.15",
     "human-standard-token-abi": "^2.0.0",
     "immer": "^9.0.6",
     "json-rpc-engine": "^6.1.0",
@@ -208,8 +210,6 @@
     "punycode": "^2.1.1",
     "qrcode-generator": "1.4.1",
     "qrcode.react": "^1.0.1",
-    "htmlcoin-ethers-wrapper": "^1.2.0",
-    "htmlcoinjs-lib": "^0.1.15",
     "react": "^16.12.0",
     "react-dnd": "^3.0.2",
     "react-dnd-html5-backend": "^7.4.4",
@@ -496,7 +496,14 @@
       "@metamask/rpc-methods>@metamask/key-tree>secp256k1": false,
       "eth-lattice-keyring>gridplus-sdk>secp256k1": false,
       "eth-lattice-keyring>secp256k1": false,
-      "htmlcoin-ethers-wrapper>secp256k1": false
+      "htmlcoin-ethers-wrapper>secp256k1": false,
+      "3box>3id-connect>@portis/web3>@portis/web3-provider-engine>eth-json-rpc-infura>json-rpc-engine>babelify>babel-core>babel-register>core-js": false,
+      "3box>3id-connect>@portis/web3>ethereumjs-util>keccak": false,
+      "3box>3id-connect>web3modal>styled-components": false,
+      "3box>orbit-db-storage-adapter>level": false,
+      "3box>orbit-db-storage-adapter>level>leveldown": false,
+      "@storybook/react>@pmmmwh/react-refresh-webpack-plugin>core-js-pure": false,
+      "resolve-url-loader>es6-iterator>es5-ext": false
     }
   }
 }
