@@ -77,7 +77,7 @@ import {
 } from '../../../helpers/utils/conversions.util';
 import { calcTokenAmount } from '../../../helpers/utils/token-util';
 import {
-  getQRCTokenTrackerLink,
+  getHRCTokenTrackerLink,
   getURLHostName,
 } from '../../../helpers/utils/util';
 import { usePrevious } from '../../../hooks/usePrevious';
@@ -353,10 +353,10 @@ export default function BuildQuote({
     },
   );
 
-  const qrcTokenTrackerLink = getQRCTokenTrackerLink(blockExplorerTokenLink);
+  const hrcTokenTrackerLink = getHRCTokenTrackerLink(blockExplorerTokenLink);
 
   const blockExplorerLabel = rpcPrefs.blockExplorerUrl
-    ? getURLHostName(qrcTokenTrackerLink)
+    ? getURLHostName(hrcTokenTrackerLink)
     : t('etherscan');
 
   const { destinationTokenAddedForSwap } = fetchParams || {};
@@ -499,7 +499,7 @@ export default function BuildQuote({
             },
           });
           global.platform.openTab({
-            url: qrcTokenTrackerLink,
+            url: hrcTokenTrackerLink,
           });
         }}
         target="_blank"
@@ -511,7 +511,7 @@ export default function BuildQuote({
   };
 
   let tokenVerificationDescription = '';
-  if (qrcTokenTrackerLink) {
+  if (hrcTokenTrackerLink) {
     if (occurrences === 1) {
       tokenVerificationDescription = t('verifyThisTokenOn', [
         <BlockExplorerLink key="block-explorer-link" />,
@@ -799,7 +799,7 @@ export default function BuildQuote({
               }
               withRightButton
               infoTooltipText={
-                qrcTokenTrackerLink &&
+                hrcTokenTrackerLink &&
                 t('swapVerifyTokenExplanation', [blockExplorerLabel])
               }
             />
@@ -811,7 +811,7 @@ export default function BuildQuote({
               >
                 {t('swapTokenVerificationSources', [occurrences])}
               </span>
-              {qrcTokenTrackerLink && (
+              {hrcTokenTrackerLink && (
                 <>
                   {t('swapTokenVerificationMessage', [
                     <a
@@ -830,7 +830,7 @@ export default function BuildQuote({
                           },
                         });
                         global.platform.openTab({
-                          url: qrcTokenTrackerLink,
+                          url: hrcTokenTrackerLink,
                         });
                       }}
                       target="_blank"

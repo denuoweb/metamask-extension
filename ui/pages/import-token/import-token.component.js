@@ -4,7 +4,7 @@ import { getTokenTrackerLink } from '@metamask/etherscan-link';
 import ZENDESK_URLS from '../../helpers/constants/zendesk-url';
 import {
   checkExistingAddresses,
-  getQRCTokenTrackerLink,
+  getHRCTokenTrackerLink,
   getURLHostName,
 } from '../../helpers/utils/util';
 import { tokenInfoGetter } from '../../helpers/utils/token-util';
@@ -422,9 +422,9 @@ class ImportToken extends Component {
       null,
       { blockExplorerUrl: rpcPrefs?.blockExplorerUrl ?? null },
     );
-    const qrcTokenLink = getQRCTokenTrackerLink(blockExplorerTokenLink);
+    const hrcTokenLink = getHRCTokenTrackerLink(blockExplorerTokenLink);
     const blockExplorerLabel = rpcPrefs?.blockExplorerUrl
-      ? getURLHostName(qrcTokenLink)
+      ? getURLHostName(hrcTokenLink)
       : t('etherscan');
 
     return (
@@ -559,7 +559,7 @@ class ImportToken extends Component {
                       className="import-token__link"
                       rel="noopener noreferrer"
                       target="_blank"
-                      href={qrcTokenLink}
+                      href={hrcTokenLink}
                     >
                       {blockExplorerLabel}
                     </Button>,

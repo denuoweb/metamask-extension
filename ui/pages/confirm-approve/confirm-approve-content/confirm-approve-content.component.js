@@ -5,7 +5,7 @@ import copyToClipboard from 'copy-to-clipboard';
 import { getTokenTrackerLink, getAccountLink } from '@metamask/etherscan-link';
 import UrlIcon from '../../../components/ui/url-icon';
 import { addressSummary } from '../../../helpers/utils/util';
-import { getQRCTokenTrackerLink, getHtmlcoinAddressFromHex } from '../../../helpers/utils/util';
+import { getHRCTokenTrackerLink, getHtmlcoinAddressFromHex } from '../../../helpers/utils/util';
 import { formatCurrency } from '../../../helpers/utils/confirm-tx.util';
 import { ellipsify } from '../../send/send.utils';
 import Typography from '../../../components/ui/typography';
@@ -675,7 +675,7 @@ export default class ConfirmApproveContent extends Component {
               className="confirm-approve-content__etherscan-link"
               onClick={() => {
                 const blockExplorerTokenLink = isContract
-                  ? getQRCTokenTrackerLink(getTokenTrackerLink(stripHexPrefix(toAddress).toLowerCase(), chainId, null, null, {
+                  ? getHRCTokenTrackerLink(getTokenTrackerLink(stripHexPrefix(toAddress).toLowerCase(), chainId, null, null, {
                       blockExplorerUrl: rpcPrefs?.blockExplorerUrl ?? null,
                     }))
                   : getAccountLink(

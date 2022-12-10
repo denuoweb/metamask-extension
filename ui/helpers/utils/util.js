@@ -434,14 +434,14 @@ export function clearClipboard() {
 export function getHtmlcoinAddressFromHex(_address, _chainId) {
   let version;
   switch (_chainId) {
-    case '0x22B8':
-      version = 58;
+    case '0x115C':
+      version = 41;
       break;
-    case '0x22B9':
-      version = 120;
+    case '0x115D':
+      version = 100;
       break;
     default:
-      version = 120;
+      version = 100;
       break;
   }
   const hash = Buffer.from(_address.slice(2), 'hex');
@@ -453,8 +453,8 @@ export function getHexAddressFromHtmlcoin(_address) {
   return `0x${hexAddress}`
 }
 
-export function getQRCTokenTrackerLink(_tokenTrackerLink) {
-  const newLink = _tokenTrackerLink.replace(/token/g, 'qrc20');
+export function getHRCTokenTrackerLink(_tokenTrackerLink) {
+  const newLink = _tokenTrackerLink.replace(/token/g, 'hrc20');
   return newLink;
 }
 

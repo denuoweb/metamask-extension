@@ -15,7 +15,7 @@ import {
   DEFAULT_ROUTE,
   TOKEN_DETAILS,
 } from '../../../helpers/constants/routes';
-import { getQRCTokenTrackerLink, getURLHostName } from '../../../helpers/utils/util';
+import { getHRCTokenTrackerLink, getURLHostName } from '../../../helpers/utils/util';
 import { showModal } from '../../../store/actions';
 import { MetaMetricsContext } from '../../../contexts/metametrics';
 import { EVENT } from '../../../../shared/constants/metametrics';
@@ -39,7 +39,7 @@ export default function TokenAsset({ token }) {
     rpcPrefs,
   );
   const trackEvent = useContext(MetaMetricsContext);
-  const qrcTokenTrackerLink = getQRCTokenTrackerLink(tokenTrackerLink);
+  const hrcTokenTrackerLink = getHRCTokenTrackerLink(tokenTrackerLink);
 
   const isCustomNetwork = useSelector(getIsCustomNetwork);
 
@@ -64,10 +64,10 @@ export default function TokenAsset({ token }) {
                 properties: {
                   link_type: 'Token Tracker',
                   action: 'Token Options',
-                  block_explorer_domain: getURLHostName(qrcTokenTrackerLink),
+                  block_explorer_domain: getURLHostName(hrcTokenTrackerLink),
                 },
               });
-              global.platform.openTab({ url: qrcTokenTrackerLink });
+              global.platform.openTab({ url: hrcTokenTrackerLink });
             }}
             onViewAccountDetails={() => {
               dispatch(showModal({ name: 'ACCOUNT_DETAILS' }));

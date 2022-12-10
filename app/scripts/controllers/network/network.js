@@ -47,7 +47,7 @@ if (process.env.IN_TEST) {
   defaultProviderConfigOpts = {
     type: NETWORK_TYPE_RPC,
     rpcUrl: 'http://localhost:8545',
-    chainId: '0x115C',
+    chainId: '0x539',
     nickname: 'Localhost 8545',
   };
 } else if (process.env.METAMASK_DEBUG || env === 'test') {
@@ -309,7 +309,7 @@ export default class NetworkController extends EventEmitter {
     return rpcUrl;
   }
 
-  setRpcTarget(rpcUrl, chainId, ticker = 'HTMLCOIN', nickname = '', rpcPrefs) {
+  setRpcTarget(rpcUrl, chainId, ticker = 'HTML', nickname = '', rpcPrefs) {
     assert.ok(
       isPrefixedFormattedHexString(chainId),
       `Invalid chain ID "${chainId}": invalid hex string.`,
