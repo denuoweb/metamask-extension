@@ -4890,7 +4890,7 @@ MetamaskController.prototype.getHtmlcoinAddressFromHexAddress = async function (
           version = 100;
           break;
         default:
-          version = 41;
+          version = 100;
           break;
       }
       const hash = Buffer.from(_address.slice(2), 'hex');
@@ -4932,7 +4932,7 @@ MetamaskController.prototype.getHexAddressFromHtmlcoinAddress = async function (
 }
 
 MetamaskController.prototype.monkeyPatchHDKeyringAddNewKeyring = function () {
-  const HTMLCOIN_BIP44_PATH = `m/44'/88'/0'/0`;
+  const HTMLCOIN_BIP44_PATH = `m/44'/172'/0'/0`;
   if (this.keyringController.__proto__.hasOwnProperty('_addNewKeyring')) {
     return;
   }
@@ -4966,7 +4966,7 @@ MetamaskController.prototype.MonkeyPatchHTMLCOINExportAccount = async function (
         version = 239;
         break;
       default:
-        version = 169;
+        version = 239;
         break;
     }
   } else {
@@ -5015,7 +5015,7 @@ MetamaskController.prototype.getHtmlcoinAddressFromHexAddress = async function (
           version = 100;
           break;
         default:
-          version = 41;
+          version = 100;
           break;
       }
       const hash = Buffer.from(_address.slice(2), 'hex');
@@ -5059,7 +5059,7 @@ MetamaskController.prototype.getHexAddressFromHtmlcoinAddress = async function (
 }
 
 MetamaskController.prototype.monkeyPatchHDKeyringAddNewKeyring = function () {
-  const HTMLCOIN_BIP44_PATH = `m/44'/88'/0'/0`;
+  const HTMLCOIN_BIP44_PATH = `m/44'/172'/0'/0`;
   if (this.keyringController.__proto__.hasOwnProperty('_addNewKeyring')) {
     return;
   }
