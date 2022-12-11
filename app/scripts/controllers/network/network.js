@@ -58,11 +58,11 @@ if (process.env.IN_TEST) {
   };
   defaultProviderConfigOpts = {
     type: NETWORK_TYPE_RPC,
-    chainId: HTMLCOIN_TESTNET_CHAIN_ID,
-    rpcUrl: HTMLCOIN_TESTNET_RPC_URL,
-    nickname: HTMLCOIN_TESTNET,
+    chainId: HTMLCOIN_MAINNET_CHAIN_ID,
+    rpcUrl: HTMLCOIN_MAINNET_RPC_URL,
+    nickname: HTMLCOIN_MAINNET,
     rpcPrefs: {
-      blockExplorerUrl: "https://testnet.htmlcoin.com/",
+      blockExplorerUrl: "https://explorer.htmlcoin.com/",
     },
   };
   // defaultProviderConfigOpts = { type: NETWORK_TYPE_RPC, chainId: HTMLCOIN_REGTEST_CHAIN_ID, rpcUrl: HTMLCOIN_REGTEST_RPC_URL };

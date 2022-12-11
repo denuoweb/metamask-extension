@@ -1539,7 +1539,7 @@ export function updateMetamaskState(newState) {
     });
 
     if (
-      nativeCurrency === 'HTMLCOIN' &&
+      nativeCurrency === 'HTML' &&
       newState.htmlcoinBalances[newSelectedAddress] !== undefined
     ) {
       console.log(

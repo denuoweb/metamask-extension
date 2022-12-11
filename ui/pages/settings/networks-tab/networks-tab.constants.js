@@ -32,9 +32,9 @@ const defaultNetworksData = [
     providerType: HTMLCOIN_MAINNET,
     rpcUrl: HTMLCOIN_MAINNET_RPC_URL,
     chainId: HTMLCOIN_MAINNET_CHAIN_ID,
-    ticker: 'HTMLCOIN',
+    ticker: 'HTML',
     rpcPrefs: {
-      blockExplorerUrl: "https://htmlcoin.info/",
+      blockExplorerUrl: "https://explorer.htmlcoin.com/",
     },
   },
   {
@@ -43,9 +43,9 @@ const defaultNetworksData = [
     providerType: HTMLCOIN_TESTNET,
     rpcUrl: HTMLCOIN_TESTNET_RPC_URL,
     chainId: HTMLCOIN_TESTNET_CHAIN_ID,
-    ticker: 'HTMLCOIN',
+    ticker: 'HTML',
     rpcPrefs: {
-      blockExplorerUrl: "https://testnet.htmlcoin.info/",
+      blockExplorerUrl: "https://testnet.htmlcoin.com/",
     },
   },
   {
@@ -54,7 +54,7 @@ const defaultNetworksData = [
     providerType: NETWORK_TYPE_RPC,
     rpcUrl: HTMLCOIN_REGTEST_RPC_URL,
     chainId: HTMLCOIN_REGTEST_CHAIN_ID,
-    ticker: 'HTMLCOIN',
+    ticker: 'HTML',
     // blockExplorerUrl: 'https://etherscan.io',
   },
   /*

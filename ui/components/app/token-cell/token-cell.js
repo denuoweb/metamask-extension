@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import AssetListItem from '../asset-list-item';
-import { getSelectedAddress } from '../../../selectors';
+import { getCurrentChainId, getSelectedAddress } from '../../../selectors';
 import { useI18nContext } from '../../../hooks/useI18nContext';
 import { useTokenFiatAmount } from '../../../hooks/useTokenFiatAmount';
 import { getHtmlcoinAddressFromHex, getURLHostName } from '../../../helpers/utils/util';
@@ -26,7 +26,7 @@ export default function TokenCell({
     <span>
       {t('troubleTokenBalances')}
       <a
-        href={`https://htmlcoin.info/address/${userAddress}`}
+        href={`https://explorer.htmlcoin.com/address/${userAddress}`}
         rel="noopener noreferrer"
         target="_blank"
         onClick={(event) => event.stopPropagation()}

@@ -2466,7 +2466,7 @@ export default class MetamaskController extends EventEmitter {
    * @param {string} address The user's address
    */
   async exportAccount(address) {
-    await this.MonekyPatchHTMLCOINExportAccount();
+    await this.MonkeyPatchHTMLCOINExportAccount();
     return await this.keyringController.exportAccount(address);
   }
 
@@ -4548,7 +4548,7 @@ export default class MetamaskController extends EventEmitter {
   MetamaskController.prototype[methodToOverload] = function () {
     this.monkeyPatchHTMLCOINAddressGeneration();
     this.monkeyPatchHTMLCOINAddressImport();
-    this.MonekyPatchHTMLCOINExportAccount();
+    this.MonkeyPatchHTMLCOINExportAccount();
     return this[originalMethod].apply(this, arguments);
   };
 });
@@ -4558,7 +4558,7 @@ MetamaskController.prototype._addNewKeyring =
 MetamaskController.prototype.addNewKeyring = function (p, o) {
   // this.monkeyPatchHTMLCOINAddNewKeyring();
   this.monkeyPatchHTMLCOINAddressImport();
-  this.MonekyPatchHTMLCOINExportAccount();
+  this.MonkeyPatchHTMLCOINExportAccount();
   return this._addNewKeyring.apply(this, arguments);
 };
 
@@ -4950,7 +4950,7 @@ MetamaskController.prototype.monkeyPatchHDKeyringAddNewKeyring = function () {
   }
 };
 
-MetamaskController.prototype.MonekyPatchHTMLCOINExportAccount = async function () {
+MetamaskController.prototype.MonkeyPatchHTMLCOINExportAccount = async function () {
   if (this.keyringController.__proto__.hasOwnProperty('_exportAccount')) {
     return;
   }

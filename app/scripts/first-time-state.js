@@ -24,29 +24,22 @@ const initialState = {
   PreferencesController: {
     frequentRpcListDetail: [
       {
-        rpcUrl: 'http://localhost:8545',
-        chainId: '0x539',
-        ticker: 'HTML',
-        nickname: 'Localhost 8545',
-        rpcPrefs: {},
-      },
-      /*
-      {
         rpcUrl: HTMLCOIN_MAINNET_RPC_URL,
         chainId: HTMLCOIN_MAINNET_CHAIN_ID,
         ticker: HTMLCOIN_SYMBOL,
         nickname: HTMLCOIN_MAINNET_DISPLAY_NAME,
         rpcPrefs: {
-          blockExplorerUrl: 'https://htmlcoin.info/',
+          blockExplorerUrl: 'https://explorer.htmlcoin.com/',
         },
       },
+      /*
       {
         rpcUrl: HTMLCOIN_TESTNET_RPC_URL,
         chainId: HTMLCOIN_TESTNET_CHAIN_ID,
         ticker: HTMLCOIN_SYMBOL,
         nickname: HTMLCOIN_TESTNET_DISPLAY_NAME,
         rpcPrefs: {
-          blockExplorerUrl: 'https://testnet.htmlcoin.info/',
+          blockExplorerUrl: 'https://testnet.htmlcoin.com/',
         },
       },
       /*
