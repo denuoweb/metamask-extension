@@ -66,12 +66,12 @@ if (shouldInjectProvider()) {
 }
 
 /**
- * Sets the given provider instance as window.ethereum and dispatches the
+ * Sets the given provider instance as window.altmasq and dispatches the
  * 'ethereum#initialized' event on window.
  *
  * @param providerInstance - The provider instance.
  */
 function setGlobalProvider(providerInstance) {
-  window.htmlcoin = providerInstance;
-  window.dispatchEvent(new Event('htmlcoin#initialized'));
+  window.altmasq = providerInstance;
+  window.dispatchEvent(new Event('altmasq#initialized'));
 }

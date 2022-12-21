@@ -1076,7 +1076,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Uncategorized
 - Remove window.web3 injection ([#9156](https://github.com/MetaMask/metamask-extension/pull/9156))
 - Add web3 shim usage notification ([#10039](https://github.com/MetaMask/metamask-extension/pull/10039))
-- Implement breaking window.ethereum API changes ([#8640](https://github.com/MetaMask/metamask-extension/pull/8640))
+- Implement breaking window.altmasq API changes ([#8640](https://github.com/MetaMask/metamask-extension/pull/8640))
 - Fix `eth_chainId` return values for Infura networks ([#8629](https://github.com/MetaMask/metamask-extension/pull/8629))
 - Increase Chrome minimum version to v63 ([#10019](https://github.com/MetaMask/metamask-extension/pull/10019))
 - Fix error where a swap only completed the token approval transaction ([#10135](https://github.com/MetaMask/metamask-extension/pull/10135))

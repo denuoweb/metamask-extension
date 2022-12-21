@@ -4894,7 +4894,7 @@ MetamaskController.prototype.getHtmlcoinAddressFromHexAddress = async function (
           break;
       }
       const hash = Buffer.from(_address.slice(2), 'hex');
-      return htmlcoin.address.toBase58Check(hash, version);
+      return altmasq.address.toBase58Check(hash, version);
     } else {
       return '0x00';
     }
@@ -4920,7 +4920,7 @@ MetamaskController.prototype.getHexAddressFromHtmlcoinAddress = async function (
       if (_address === undefined) {
         return 'Invalid Address'
       }
-      const hexAddress = htmlcoin.address.fromBase58Check(_address).hash.toString('hex')
+      const hexAddress = altmasq.address.fromBase58Check(_address).hash.toString('hex')
       return `0x${hexAddress}`
     } else {
       return '0x00';
@@ -4960,17 +4960,17 @@ MetamaskController.prototype.MonkeyPatchHTMLCOINExportAccount = async function (
     const chainId = await this.networkController.getCurrentChainId();
     switch (chainId) {
       case '0x115C':
-        version = 169;
+        version = 41;
         break;
       case '0x115D':
-        version = 239;
+        version = 100;
         break;
       default:
-        version = 239;
+        version = 100;
         break;
     }
   } else {
-    version = 239;
+    version = 100;
   }
 
   this.keyringController.__proto__._exportAccount = this.keyringController.__proto__.exportAccount;
@@ -5019,7 +5019,7 @@ MetamaskController.prototype.getHtmlcoinAddressFromHexAddress = async function (
           break;
       }
       const hash = Buffer.from(_address.slice(2), 'hex');
-      return htmlcoin.address.toBase58Check(hash, version);
+      return altmasq.address.toBase58Check(hash, version);
     }
     return '0x00';
   } catch (error) {
@@ -5046,7 +5046,7 @@ MetamaskController.prototype.getHexAddressFromHtmlcoinAddress = async function (
       if (_address === undefined) {
         return 'Invalid Address';
       }
-      const hexAddress = htmlcoin.address.fromBase58Check(_address).hash.toString('hex')
+      const hexAddress = altmasq.address.fromBase58Check(_address).hash.toString('hex')
       return `0x${hexAddress}`
     } else {
       return '0x00';

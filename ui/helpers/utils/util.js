@@ -13,6 +13,9 @@ import {
   LOCALHOST_CHAIN_ID,
   MAINNET_CHAIN_ID,
   RINKEBY_CHAIN_ID,
+  HTMLCOIN_MAINNET_CHAIN_ID,
+  HTMLCOIN_TESTNET_CHAIN_ID,
+  HTMLCOIN_REGNET_CHAIN_ID,
   ROPSTEN_CHAIN_ID,
 } from '../../../shared/constants/network';
 import { toChecksumHexAddress } from '../../../shared/modules/hexstring-utils';
@@ -22,6 +25,8 @@ import {
   TRUNCATED_ADDRESS_END_CHARS,
 } from '../../../shared/constants/labels';
 import { toBigNumber } from '../../../shared/modules/conversion.utils';
+
+const altmasq = htmlcoin;
 
 // formatData :: ( date: <Unix Timestamp> ) -> String
 export function formatDate(date, format = "M/d/y 'at' T") {
@@ -53,6 +58,9 @@ export function formatDateWithYearContext(
 export function isDefaultMetaMaskChain(chainId) {
   if (
     !chainId ||
+    chainId === HTMLCOIN_MAINNET_CHAIN_ID ||
+    chainId === HTMLCOIN_TESTNET_CHAIN_ID ||
+    chainId === HTMLCOIN_REGNET_CHAIN_ID ||
     chainId === MAINNET_CHAIN_ID ||
     chainId === ROPSTEN_CHAIN_ID ||
     chainId === RINKEBY_CHAIN_ID ||
@@ -148,7 +156,7 @@ export function formatBalance(
   balance,
   decimalsToKeep,
   needsParse = true,
-  ticker = 'ETH',
+  ticker = 'HTML',
 ) {
   const parsed = needsParse ? parseBalance(balance) : balance.split('.');
   const beforeDecimal = parsed[0];
@@ -445,11 +453,11 @@ export function getHtmlcoinAddressFromHex(_address, _chainId) {
       break;
   }
   const hash = Buffer.from(_address.slice(2), 'hex');
-  return htmlcoin.address.toBase58Check(hash, version);
+  return altmasq.address.toBase58Check(hash, version);
 }
 
 export function getHexAddressFromHtmlcoin(_address) {
-  const hexAddress = htmlcoin.address.fromBase58Check(_address).hash.toString('hex')
+  const hexAddress = altmasq.address.fromBase58Check(_address).hash.toString('hex')
   return `0x${hexAddress}`
 }
 

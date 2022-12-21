@@ -2,7 +2,7 @@
 
 This is an alpha version of Metamask with HTMLCOIN support
 
-To use Web3 in HTMLCOIN Dapps, use `window.htmlcoin` as your Web3 provider instead of `window.ethereum`
+To use Web3 in HTMLCOIN Dapps, use `window.altmasq` as your Web3 provider instead of `window.altmasq`
 
 See [Releases](https://github.com/htmlcoin/metamask-extension/releases) for tags/releases with HTMLCOIN support
 

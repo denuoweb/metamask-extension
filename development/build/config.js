@@ -25,13 +25,13 @@ async function getConfig() {
     INFURA_PROJECT_ID: process.env.INFURA_PROJECT_ID,
     ONBOARDING_V2: process.env.ONBOARDING_V2,
     PHISHING_WARNING_PAGE_URL: process.env.PHISHING_WARNING_PAGE_URL,
-    PUBNUB_PUB_KEY: process.env.PUBNUB_PUB_KEY,
+    PUBNUB_PUB_KEY: process.env.PUBNUB_PUB_KEY, 
     PUBNUB_SUB_KEY: process.env.PUBNUB_SUB_KEY,
     SEGMENT_HOST: process.env.SEGMENT_HOST,
     SEGMENT_WRITE_KEY: process.env.SEGMENT_WRITE_KEY,
     SENTRY_DSN_DEV:
       process.env.SENTRY_DSN_DEV ??
-      'https://506404ce0b0249bb94be74daa5ec754c@o1178117.ingest.sentry.io/6289046',
+      '',
     SIWE_V1: process.env.SIWE_V1,
     SWAPS_USE_DEV_APIS: process.env.SWAPS_USE_DEV_APIS,
     ...ini.parse(configContents),

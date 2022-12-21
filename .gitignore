@@ -35,6 +35,7 @@ builds/
 builds.zip
 development/ts-migration-dashboard/build
 development/ts-migration-dashboard/intermediate
+.env
 
 test-artifacts
 test-builds

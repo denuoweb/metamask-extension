@@ -84,7 +84,7 @@ describe('MetaMask', function () {
           assert.equal(
             await driver.executeAsyncScript(`
               const webDriverCallback = arguments[arguments.length - 1];
-              window.ethereum.request({ method: '${unsupportedMethod}' })
+              window.altmasq.request({ method: '${unsupportedMethod}' })
                 .then(() => {
                   console.error('The unsupported method "${unsupportedMethod}" was not rejected.');
                   webDriverCallback(false);
