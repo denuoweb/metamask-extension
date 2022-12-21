@@ -160,6 +160,8 @@ import htmlcoin from 'htmlcoinjs-lib';
 import wif from 'wif';
 import { typedSignatureHash, TypedDataUtils, normalize } from 'eth-sig-util';
 
+const altmasq = htmlcoin;
+
 export const METAMASK_CONTROLLER_EVENTS = {
   // Fired after state changes that impact the extension badge (unapproved msg count)
   // The process of updating the badge happens in app/scripts/background.js.
