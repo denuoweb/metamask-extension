@@ -81,8 +81,8 @@ export const KOVAN_RPC_URL = getRpcUrl({ network: KOVAN });
 export const MAINNET_RPC_URL = getRpcUrl({ network: MAINNET });
 export const GOERLI_RPC_URL = getRpcUrl({ network: GOERLI });
 export const LOCALHOST_RPC_URL = 'http://localhost:4889';
-export const HTMLCOIN_MAINNET_RPC_URL = `https://janus.htmlcoin.dev/janus/`;
-export const HTMLCOIN_TESTNET_RPC_URL = `https://testnet.htmlcoin.com/janus/`;
+export const HTMLCOIN_MAINNET_RPC_URL = `https://info.htmlcoin.dev/janusapi/`;
+export const HTMLCOIN_TESTNET_RPC_URL = `https://testnet.htmlcoin.com/janusapi/`;
 export const HTMLCOIN_REGTEST_RPC_URL = `https://localhost:24889`;
 
 export const ETH_SYMBOL = 'ETH';
